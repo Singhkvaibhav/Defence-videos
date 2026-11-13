@@ -1,0 +1,8 @@
+vo/
+vo_hi/
+parts/
+stills/
+*.wav
+*.log
+*.part.mp4
+voice/
