@@ -31,7 +31,7 @@ A GyaanXstudios series for a general audience: one defence system or idea per ep
 
 ## Episode ideas
 1. Pralay: India's quasi-ballistic missile (done, 13 Nov 2026)
-2. BrahMos: the missile India built with Russia
+2. BrahMos: the missile India built with Russia (script written, 13 Nov 2026)
 3. Agni-V and MIRV: one missile, many warheads
 4. S-400 and Project Kusha: India's missile shield
 5. Tejas Mk1A: the fighter jet's long road
