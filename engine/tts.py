@@ -1,0 +1,31 @@
+import wave, json, re, io, sys
+import numpy as np
+from piper import PiperVoice
+from piper.config import SynthesisConfig
+
+def run(beats, voice_path, outdir='vo', length_scale=1.22, noise=(0.55, 0.7), gaps=(0.55, 0.35)):
+    v = PiperVoice.load(voice_path)
+    cfg = SynthesisConfig(length_scale=length_scale, noise_scale=noise[0], noise_w_scale=noise[1])
+    SR = v.config.sample_rate
+    def synth(t):
+        b = io.BytesIO()
+        with wave.open(b, "wb") as w: v.synthesize_wav(t, w, syn_config=cfg)
+        b.seek(0)
+        with wave.open(b) as w: return np.frombuffer(w.readframes(w.getnframes()), np.int16)
+    durs = {}
+    for i, (k, txt) in enumerate(beats):
+        parts = [p for p in re.split(r'(?<=[.?!:।])\s+', txt) if p]
+        out = []
+        for j, p in enumerate(parts):
+            a = synth(p)
+            nz = np.where(np.abs(a) > 300)[0]
+            if len(nz): a = a[max(0, nz[0]-800): nz[-1]+1600]
+            out.append(a)
+            if j < len(parts)-1:
+                out.append(np.zeros(int(SR*(gaps[0] if p.endswith(('.', '?', '!', '।')) else gaps[1])), np.int16))
+        a = np.concatenate(out)
+        with wave.open(f"{outdir}/{i:02d}_{k}.wav", "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(a.tobytes())
+        durs[k] = len(a)/SR
+    json.dump(durs, open(f"{outdir}/durs.json", "w"), indent=1)
+    print(SR, round(sum(durs.values()), 1))

@@ -6,3 +6,11 @@ stills/
 *.log
 *.part.mp4
 voice/
+episodes/*/final.mp4
+episodes/*/video.mp4
+episodes/*/concat.txt
+episodes/*/mix_*.wav
+episodes/*/*.srt
+episodes/*/*.m4a
+episodes/*/Def*_thumb.png
+__pycache__/

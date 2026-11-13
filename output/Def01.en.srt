@@ -1,0 +1,372 @@
+1
+00:00:00,900 --> 00:00:05,791
+Ten minutes past eleven, on the morning of the fifth of November 2026.
+
+2
+00:00:05,791 --> 00:00:09,372
+Dr APJ Abdul Kalam Island, off the coast of Odisha.
+
+3
+00:00:09,372 --> 00:00:13,023
+A sealed tube swings upright on the back of a truck.
+
+4
+00:00:13,023 --> 00:00:13,781
+Then fire.
+
+5
+00:00:13,781 --> 00:00:18,351
+The missile climbs, flattens out, turns, and hits its target.
+
+6
+00:00:21,867 --> 00:00:25,978
+Hours later, the Defence Ministry said its induction "has become imminent".
+
+7
+00:00:25,978 --> 00:00:30,469
+This is Pralay, and it may be the most important missile India has built in years.
+
+8
+00:00:30,469 --> 00:00:31,688
+Let's decode it.
+
+9
+00:00:36,033 --> 00:00:37,595
+First, the spec sheet.
+
+10
+00:00:37,595 --> 00:00:39,427
+Weight: about five tonnes.
+
+11
+00:00:39,427 --> 00:00:40,310
+Fuel: solid.
+
+12
+00:00:40,310 --> 00:00:44,179
+Range: one hundred and fifty to five hundred kilometres.
+
+13
+00:00:44,179 --> 00:00:52,285
+Warhead: conventional, five hundred to one thousand kilograms, and the heavier the warhead, the shorter the reach.
+
+14
+00:00:54,267 --> 00:00:58,495
+Home: a sealed canister on an eight-by-eight road-mobile launcher.
+
+15
+00:00:58,495 --> 00:01:05,562
+Designed by DRDO's Research Centre Imarat in Hyderabad, with Bharat Dynamics Limited as its production partner.
+
+16
+00:01:05,562 --> 00:01:06,446
+And the name?
+
+17
+00:01:06,446 --> 00:01:10,737
+In Sanskrit, pralay means the great dissolution, the end of an age.
+
+18
+00:01:10,737 --> 00:01:12,236
+Not a subtle name.
+
+19
+00:01:18,000 --> 00:01:22,868
+To picture five hundred kilometres, start in Hyderabad, where Pralay was designed.
+
+20
+00:01:22,868 --> 00:01:27,737
+A straight line from there to Bengaluru is almost exactly five hundred kilometres.
+
+21
+00:01:27,737 --> 00:01:30,200
+An airliner needs about an hour for that.
+
+22
+00:01:30,200 --> 00:01:31,790
+Pralay needs minutes.
+
+23
+00:01:34,400 --> 00:01:36,523
+Here's what makes Pralay special.
+
+24
+00:01:36,523 --> 00:01:39,708
+There are three ways to fly a missile to a target.
+
+25
+00:01:39,708 --> 00:01:40,707
+One: ballistic.
+
+26
+00:01:40,707 --> 00:01:43,517
+Throw it high, let it fall along a tall arc.
+
+27
+00:01:43,517 --> 00:01:45,266
+It's fast, but predictable.
+
+28
+00:01:45,266 --> 00:01:52,685
+Once a radar sees that arc, a defence system can calculate where it will land and send an interceptor to meet it.
+
+29
+00:01:57,833 --> 00:01:58,687
+Two: cruise.
+
+30
+00:01:58,687 --> 00:02:02,104
+It flies low, like a small jet, hugging the ground.
+
+31
+00:02:02,104 --> 00:02:04,469
+It's hard to spot, but much slower.
+
+32
+00:02:04,469 --> 00:02:07,426
+And three: quasi-ballistic, which is Pralay.
+
+33
+00:02:07,426 --> 00:02:15,282
+It launches like a ballistic missile, but flies a lower, flatter arc, and in the final stage it can change course.
+
+34
+00:02:19,533 --> 00:02:22,962
+The radar's prediction says it lands here, and then it doesn't.
+
+35
+00:02:22,962 --> 00:02:27,087
+Defence sources told ThePrint it was designed to evade interceptor missiles,
+
+36
+00:02:27,087 --> 00:02:34,352
+and a defence scientist quoted after the latest trial said it flies at hypersonic speed, more than five times the speed of sound.
+
+37
+00:02:40,733 --> 00:02:42,235
+Now look at the launcher.
+
+38
+00:02:42,235 --> 00:02:49,053
+Older missiles that ran on liquid fuel had to be fuelled before firing, which took time and could give the game away.
+
+39
+00:02:49,053 --> 00:02:52,993
+Pralay's solid fuel is already inside, sealed in its canister.
+
+40
+00:02:56,033 --> 00:03:00,279
+The truck drives in, stops, raises the tube, fires, and moves on.
+
+41
+00:03:00,279 --> 00:03:02,467
+Soldiers call it shoot and scoot.
+
+42
+00:03:02,467 --> 00:03:08,685
+A launcher that never stays in one place is far harder to find, and far harder to hit back.
+
+43
+00:03:13,667 --> 00:03:15,657
+Pralay didn't come from nowhere.
+
+44
+00:03:15,657 --> 00:03:20,965
+India's first ballistic missile, Prithvi, joined the forces more than thirty years ago.
+
+45
+00:03:20,965 --> 00:03:27,539
+In 2011, DRDO first tested a smaller tactical missile called Prahaar, and Pralay grew out of that programme.
+
+46
+00:03:27,539 --> 00:03:34,112
+The project was sanctioned in 2015, with a budget of about three hundred and thirty-three crore rupees.
+
+47
+00:03:35,867 --> 00:03:41,572
+The first two test flights came on the twenty-second and twenty-third of December 2021.
+
+48
+00:03:41,572 --> 00:03:48,834
+Meanwhile, the clashes with China along the Line of Actual Control in mid-2020 had changed the Army's thinking,
+
+49
+00:03:48,834 --> 00:03:50,973
+and in 2022 it asked for Pralay.
+
+50
+00:03:50,973 --> 00:03:54,839
+Another test followed on the seventh of November 2023.
+
+51
+00:03:57,300 --> 00:04:03,341
+On the twenty-sixth of January 2025, Pralay rolled down Kartavya Path in the Republic Day parade.
+
+52
+00:04:03,341 --> 00:04:10,431
+On the twenty-eighth and twenty-ninth of July 2025, two back-to-back shots checked its longest and shortest range.
+
+53
+00:04:10,431 --> 00:04:18,013
+And on the fifth of November 2026 came the user trial, where the armed forces themselves put the system through its paces.
+
+54
+00:04:18,013 --> 00:04:22,875
+Reports say orders have been cleared for both the Army and the Air Force.
+
+55
+00:04:24,633 --> 00:04:26,295
+So why does India need it?
+
+56
+00:04:26,295 --> 00:04:27,956
+Picture a ladder of reach.
+
+57
+00:04:27,956 --> 00:04:32,817
+At the bottom: artillery and rockets like Pinaka, reaching tens of kilometres.
+
+58
+00:04:32,817 --> 00:04:40,570
+At the top: the Agni missiles, reaching from seven hundred to eight thousand kilometres, part of India's strategic deterrent.
+
+59
+00:04:40,570 --> 00:04:42,355
+In between, there was a gap.
+
+60
+00:04:42,355 --> 00:04:46,293
+Pralay fills it: a conventional missile that can hit airfields,
+
+61
+00:04:46,293 --> 00:04:51,084
+radar sites and command centres hundreds of kilometres away, in minutes.
+
+62
+00:04:57,667 --> 00:04:59,877
+And that word, conventional, matters.
+
+63
+00:04:59,877 --> 00:05:02,728
+DRDO describes Pralay as a conventional missile,
+
+64
+00:05:02,728 --> 00:05:07,847
+and India's nuclear weapons stay with a separate command, the Strategic Forces Command.
+
+65
+00:05:07,847 --> 00:05:11,928
+Pralay is meant for the battlefield, not for nuclear deterrence.
+
+66
+00:05:16,967 --> 00:05:18,283
+How does it compare?
+
+67
+00:05:18,283 --> 00:05:22,734
+Start at home, with BrahMos, India's famous supersonic cruise missile.
+
+68
+00:05:22,734 --> 00:05:25,995
+BrahMos skims low and can weave towards its target.
+
+69
+00:05:25,995 --> 00:05:28,502
+Pralay climbs and dives, and is faster.
+
+70
+00:05:28,502 --> 00:05:34,834
+Defence sources told ThePrint that Pralay's edge is speed, while BrahMos brings agility and stealth.
+
+71
+00:05:34,834 --> 00:05:37,391
+They aren't rivals; they're a team.
+
+72
+00:05:43,967 --> 00:05:50,492
+Abroad, Pralay's closest cousins are Russia's Iskander, used in the war in Ukraine, China's Dong Feng-12,
+
+73
+00:05:50,492 --> 00:05:57,202
+America's Precision Strike Missile and South Korea's Hyunmoo-2: fast, mobile, accurate battlefield missiles.
+
+74
+00:05:57,202 --> 00:06:00,034
+And India's neighbours are already investing.
+
+75
+00:06:00,034 --> 00:06:04,713
+On the thirteenth of January 2026, Army chief General Upendra Dwivedi said,
+
+76
+00:06:04,713 --> 00:06:12,216
+"Pakistan has established a rocket force," adding, "It is the need of the hour that we also establish such a force."
+
+77
+00:06:15,433 --> 00:06:21,009
+Which brings us to the fight inside India's defence world: who should control missiles like Pralay?
+
+78
+00:06:21,009 --> 00:06:27,888
+The idea of a dedicated rocket force goes back to the late General Bipin Rawat, India's first Chief of Defence Staff.
+
+79
+00:06:30,800 --> 00:06:37,528
+Supporters, like retired Brigadier Anil Raman, argue that India's long-range strike weapons are spread across the Army,
+
+80
+00:06:37,528 --> 00:06:42,125
+the Air Force and the Navy, and that one command would decide faster in a crisis.
+
+81
+00:06:42,125 --> 00:06:48,741
+Critics, like retired Air Marshal Narmdeshwar Tiwari, point out that only China and Russia have created such a force,
+
+82
+00:06:48,741 --> 00:06:52,329
+and say India should invest in modern fighter aircraft instead.
+
+83
+00:06:52,329 --> 00:06:55,769
+The government has not yet announced a final structure.
+
+84
+00:06:59,533 --> 00:07:02,754
+If you remember one thing, make it three words.
+
+85
+00:07:02,754 --> 00:07:06,309
+Low: a flatter arc than a classic ballistic missile.
+
+86
+00:07:06,309 --> 00:07:09,865
+Late: it turns in the final stage, to beat defences.
+
+87
+00:07:09,865 --> 00:07:14,392
+Loaded: sealed in its canister with solid fuel, ready to fire.
+
+88
+00:07:20,067 --> 00:07:20,838
+What's next?
+
+89
+00:07:20,838 --> 00:07:23,744
+The Defence Ministry says induction is imminent.
+
+90
+00:07:23,744 --> 00:07:28,905
+The big open questions are how many missiles will be built, and who will command them.
+
+91
+00:07:28,905 --> 00:07:33,950
+As of the thirteenth of November 2026, those decisions have not been announced.
+
+92
+00:07:36,200 --> 00:07:41,360
+Next on India's Defence, Decoded: BrahMos, the missile India built with Russia.
+
+93
+00:07:41,360 --> 00:07:45,336
+To catch it when it's out, subscribe to Gyaan-X Studios.
+

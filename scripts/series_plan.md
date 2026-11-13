@@ -30,7 +30,7 @@ A GyaanXstudios series for a general audience: one defence system or idea per ep
 - Indian and official sources first (the same order as the World Affairs series).
 
 ## Episode ideas
-1. Pralay: India's quasi-ballistic missile (script approved, 13 Nov 2026)
+1. Pralay: India's quasi-ballistic missile (done, 13 Nov 2026)
 2. BrahMos: the missile India built with Russia
 3. Agni-V and MIRV: one missile, many warheads
 4. S-400 and Project Kusha: India's missile shield
