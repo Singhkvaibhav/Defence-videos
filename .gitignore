@@ -14,3 +14,4 @@ episodes/*/*.srt
 episodes/*/*.m4a
 episodes/*/Def*_thumb.png
 __pycache__/
+episodes/*/thumb_*.png
