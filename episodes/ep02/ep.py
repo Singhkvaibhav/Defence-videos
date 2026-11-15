@@ -414,10 +414,10 @@ def s_range(first):
 # ================= the speed-versus-range chart =================
 def _cx(km): return 200 + (math.log10(km) - 2)*1029         # 100 km .. 3,000 km, matching the 1520 px axis
 def _cy(mach): return 820 - mach/3.4*560
-CHART = [('TOMAHAWK', 1600, .74, 'Tomahawk', B['steel'], None, 'l', 42),
+CHART = [('TOMAHAWK', 2000, .74, 'Tomahawk', B['steel'], None, 'l', 50),
          ('HARPOON', 240, .85, 'The Harpoon', B['steel'], None, 'l', 40),
          ('EXOCET', 180, .93, 'Exocet', B['steel'], None, 'r', -4),
-         ('KALIBR', 1500, .80, "Russia's Kalibr", B['cyan'], 170, 'r', -4),
+         ('KALIBR', 1500, .80, "Russia's Kalibr", B['cyan'], 170, 'r', -50),
          ('YJ-18', 540, .80, 'YJ-18', B['cyan'], 170, 'l', -4),
          ('BRAHMOS', 400, 3.0, 'BrahMos makes the opposite', B['amber'], None, 'l', 0)]
 def s_chart(first):
@@ -537,35 +537,44 @@ def s_war(first):
         hud(ctx, t, 'OPERATION SINDOOR · 9–10 MAY 2025', a_out, EP)
         ctx.save(); camera(ctx, t, D, (1.0, 1.03), cy=520)
         a = fin(t, .1, .5)*a_out if first == 0 else a_out
-        tc = Ts('be careful here'); warn = ease(seg(t, tc - .3, tc + .3)) if Ts('be careful here') < 900 else 1.
-        if first == 0 and warn < 1:
-            txt(ctx, 'OPERATION SINDOOR', W/2, 420, 110, B['ice'], a*(1 - warn), 'black', 'c', glow=1)
-            txt(ctx, 'MAY 2025', W/2, 500, 44, B['amber'], a*(1 - warn), 'black', 'c')
-        if warn > 0:
-            aa = warn*a_out
-            # left: reported, greyed and marked. right: on the record.
-            q1 = ease(seg(t, Ts('media accounts') - .6, Ts('media accounts') + .3))*aa if Ts('media accounts') < 900 else aa
-            if q1 > 0:
-                card(ctx, 120, 220, 800, 560, q1*.75, 'REPORTED · NOT OFFICIAL', B['steel'], p=q1)
-                for j, l in enumerate(('Exact numbers of missiles', 'Lists of airbases struck', 'Media accounts only')):
-                    txt(ctx, l, 170, 400 + j*64, 32, B['steel'], q1*.8, 'bold')
-                ctx.save(); ctx.translate(520, 640); ctx.rotate(-.12)
-                txt(ctx, 'NOT CONFIRMED', 0, 0, 52, B['alert'], q1*.9, 'black', 'c', glow=.5); ctx.restore()
-                txt(ctx, 'NO OFFICIAL WEAPONS LIST PUBLISHED', 520, 740, 22, B['steel'], q1*.9, 'bold', 'c', mono=True)
-            q2 = ease(seg(t, Ts('What is on the record') - .3, Ts('What is on the record') + .4))*a_out if Ts('What is on the record') < 900 else 0
-            if q2 > 0:
-                card(ctx, 1000, 220, 800, 560, q2, 'ON THE RECORD · 18 OCT 2025', B['amber'], p=q2)
-                for j, l in enumerate(wrap(ctx, '"Every inch of Pakistan is within the reach of BrahMos."', 36, 700, 'bold')):
-                    txt(ctx, l, 1040, 380 + j*48, 36, B['ice'], q2, 'bold')
-                for j, l in enumerate(wrap(ctx, '"The operation was just a trailer."', 36, 700, 'bold')):
-                    txt(ctx, l, 1040, 540 + j*48, 36, B['amber'], ease(seg(t, Ts('just a trailer') - .3, Ts('just a trailer') + .3))*a_out, 'bold')
-                txt(ctx, 'DEFENCE MINISTER, AT THE LUCKNOW PLANT', 1040, 700, 22, B['cyan'], q2, 'bold', mono=True)
-            tr = Ts('Read that how you like'); q = seg(t, tr - .2, tr + .4)
-            if q > 0:
-                qa = ease(q)*a_out
-                fill(ctx, lambda: rrect(ctx, 300, 830, 1320, 100, 10), B['deep'], .92*qa)
-                stroke_pts(ctx, rect_pts(300, 830, 1320, 100), 1, B['cyan'], qa, 3)
-                txt(ctx, 'AN UNUSUALLY DIRECT STATEMENT', W/2, 896, 38, B['ice'], qa, 'black', 'c')
+        tc = Ts('be careful here')
+        warn = ease(seg(t, tc - .3, tc + .3)) if tc < 900 else 1.
+        if first == 0:
+            # the title lifts and shrinks as the caution lands; the cards wait for the next beat
+            sc = 1 - .42*warn
+            ctx.save(); ctx.translate(W/2, lerp(430, 270, warn)); ctx.scale(sc, sc)
+            txt(ctx, 'OPERATION SINDOOR', 0, 0, 110, B['ice'], a, 'black', 'c', glow=1)
+            ctx.restore()
+            txt(ctx, 'MAY 2025', W/2, lerp(510, 350, warn), 44*(1 - .3*warn), B['amber'], a, 'black', 'c')
+            td = Ts('ninth and tenth of May')
+            if td < 900:
+                txt(ctx, 'INDIA STRUCK TARGETS IN PAKISTAN', W/2, lerp(580, 410, warn), 28, B['steel'],
+                    ease(seg(t, td - .2, td + .4))*a_out, 'bold', 'c', mono=True)
+            if warn > 0:
+                tagb(ctx, W/2, 600, 'BE CAREFUL WITH WHAT YOU READ ABOUT THIS', B['alert'], warn*a_out, 30, align='c')
+            ctx.restore(); return
+        q1 = ease(seg(t, Ts('media accounts') - .6, Ts('media accounts') + .3))*a_out if Ts('media accounts') < 900 else a_out
+        if q1 > 0:
+            card(ctx, 120, 220, 800, 560, q1*.75, 'REPORTED · NOT OFFICIAL', B['steel'], p=q1)
+            for j, l in enumerate(('Exact numbers of missiles', 'Lists of airbases struck', 'Media accounts only')):
+                txt(ctx, l, 170, 400 + j*64, 32, B['steel'], q1*.8, 'bold')
+            ctx.save(); ctx.translate(520, 640); ctx.rotate(-.12)
+            txt(ctx, 'NOT CONFIRMED', 0, 0, 52, B['alert'], q1*.9, 'black', 'c', glow=.5); ctx.restore()
+            txt(ctx, 'NO OFFICIAL WEAPONS LIST PUBLISHED', 520, 740, 22, B['steel'], q1*.9, 'bold', 'c', mono=True)
+        q2 = ease(seg(t, Ts('What is on the record') - .3, Ts('What is on the record') + .4))*a_out if Ts('What is on the record') < 900 else (a_out if first > 2 else 0)
+        if q2 > 0:
+            card(ctx, 1000, 220, 800, 560, q2, 'ON THE RECORD · 18 OCT 2025', B['amber'], p=q2)
+            for j, l in enumerate(wrap(ctx, '"Every inch of Pakistan is within the reach of BrahMos."', 36, 700, 'bold')):
+                txt(ctx, l, 1040, 380 + j*48, 36, B['ice'], q2, 'bold')
+            for j, l in enumerate(wrap(ctx, '"The operation was just a trailer."', 36, 700, 'bold')):
+                txt(ctx, l, 1040, 540 + j*48, 36, B['amber'], ease(seg(t, Ts('just a trailer') - .3, Ts('just a trailer') + .3))*a_out, 'bold')
+            txt(ctx, 'DEFENCE MINISTER, AT THE LUCKNOW PLANT', 1040, 700, 22, B['cyan'], q2, 'bold', mono=True)
+        tr = Ts('Read that how you like'); q = seg(t, tr - .2, tr + .4)
+        if q > 0:
+            qa = ease(q)*a_out
+            fill(ctx, lambda: rrect(ctx, 300, 830, 1320, 100, 10), B['deep'], .92*qa)
+            stroke_pts(ctx, rect_pts(300, 830, 1320, 100), 1, B['cyan'], qa, 3)
+            txt(ctx, 'AN UNUSUALLY DIRECT STATEMENT', W/2, 896, 38, B['ice'], qa, 'black', 'c')
         ctx.restore()
     return scene(f)
 
@@ -679,11 +688,11 @@ def s_ng(first):
         shrink = ease(seg(t, Ts('about six metres') - .3, Ts('about six metres') + 1.2)) if Ts('about six metres') < 900 else 1.
         # the current missile shrinking into the NG
         L = lerp(1300, 920, shrink)
-        missile(ctx, 820, 330, 1300, 0, a*(1 - shrink*.75), p=fin(t, .1, .8), col=B['steel'], fill_a=.06)
-        txt(ctx, 'BRAHMOS · 8.4 M · 3,000 KG', 820, 230, 30, B['steel'], a*(1 - shrink*.4), 'black', 'c')
+        missile(ctx, 880, 290, 1240, 0, a*(1 - shrink*.75), p=fin(t, .1, .8), col=B['steel'], fill_a=.06)
+        txt(ctx, 'BRAHMOS · 8.4 M · 3,000 KG', 880, 195, 30, B['steel'], a*(1 - shrink*.4), 'black', 'c')
         if shrink > .1:
-            missile(ctx, 760, 560, L, 0, a*shrink, col=B['amber'])
-            txt(ctx, f'BRAHMOS-NG · ~6 M · UNDER 1,500 KG', 760, 470, 32, B['amber'], a*shrink, 'black', 'c', glow=.6)
+            missile(ctx, 820, 500, L, 0, a*shrink, col=B['amber'])
+            txt(ctx, 'BRAHMOS-NG · ~6 M · UNDER 1,500 KG', 820, 405, 32, B['amber'], a*shrink, 'black', 'c', glow=.6)
         # Tejas carrying more of them
         tq = ease(seg(t, Ts('including the Tejas') - .3, Ts('including the Tejas') + .5))*a_out
         if tq > 0:
@@ -697,11 +706,11 @@ def s_ng(first):
         for i, (k, v, cue, col) in enumerate(rows):
             q = seg(t, Ts(cue) - .2, Ts(cue) + .5)
             if q <= 0: continue
-            y = 300 + i*86; qa = ease(q)*a_out
+            y = 690 + i*92; qa = ease(q)*a_out
             txt(ctx, k, 140, y, 26, col, qa, 'bold', mono=True)
             txt(ctx, v, 140, y + 44, 40, B['ice'] if i < 2 else B['steel'], qa, 'black', glow=.4 if i < 2 else 0)
         tsrc = Ts('BrahMos Aerospace says'); q = seg(t, tsrc - .2, tsrc + .4)
-        if q > 0: txt(ctx, 'SOURCE: BRAHMOS AEROSPACE', W - 70, 1000, 18, B['steel'], ease(q)*a_out, 'reg', 'r', mono=True)
+        if q > 0: txt(ctx, 'SOURCE: BRAHMOS AEROSPACE', W - 70, 935, 18, B['steel'], ease(q)*a_out, 'reg', 'r', mono=True)
         ctx.restore()
     return scene(f)
 
