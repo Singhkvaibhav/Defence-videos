@@ -15,3 +15,6 @@ episodes/*/*.m4a
 episodes/*/Def*_thumb*.png
 __pycache__/
 episodes/*/thumb_*.png
+episodes/*/small.mp4
+episodes/*/ffmpeg2pass*
+episodes/*/concat.txt
