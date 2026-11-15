@@ -1,0 +1,59 @@
+=== ENGLISH ===
+TITLE
+BrahMos: The Missile That Flies at Mach 3, Ten Metres Above the Sea | India's Defence, Decoded Ep 2
+
+SHORT DESCRIPTION
+As of 13 November 2026. BrahMos is the missile India built with Russia, named after two rivers, and the first weapon of its class India has ever sold abroad. This episode covers where it came from (Moscow, 1998), what it can actually do, how it compares with the Tomahawk, Kalibr and others, the 2022 accidental firing, what is and isn't on the record about Operation Sindoor, and which countries have bought it.
+
+CHAPTERS
+0:00 Lucknow, 18 October 2025
+0:45 Where it came from: Moscow, 1998
+1:22 The shortcut: the P-800 Oniks
+1:42 Into service: 2001 to 2020
+2:02 One: speed
+2:28 Two: flying low, under the radar horizon
+2:51 Three: fire and forget
+3:21 Launched from almost anywhere
+3:34 The range story and the MTCR
+4:22 Speed versus range: how it compares
+5:12 So is it unique?
+5:41 The accident: 9 March 2022
+6:29 Operation Sindoor: on the record vs reported
+7:16 Who has it: Philippines, Vietnam, Indonesia
+8:01 Who else wants it
+8:33 The Lucknow plant
+8:51 BrahMos-NG
+9:31 BrahMos in three words
+9:51 Next
+
+A NOTE ON SOURCING
+The Defence Ministry has not published a weapons list for Operation Sindoor. Figures circulating about numbers of missiles and airbases are media reports, not official statements, and the video says so. The one-metre accuracy figure is the manufacturer's claim. The 800 km variant is reported to be in trials, not confirmed in service.
+
+SOURCES (pages opened)
+- PIB, 18 Oct 2025, Lucknow flag-off — https://www.pib.gov.in/PressReleasePage.aspx?PRID=2180675&reg=48&lang=2
+- DD News, 18 Oct 2025 — https://ddnews.gov.in/en/india-flags-off-first-brahmos-missile-batch-from-lucknow-facility-every-inch-of-pakistan-now-within-reach-says-rajnath-singh/
+- News On AIR, 12 May 2025, Operation Sindoor — https://www.newsonair.gov.in/operation-sindoor-india-destroys-terror-bases-exposes-pakistans-air-defenses-in-unprecedented-strike
+- The Tribune, BrahMos turns 25 — https://www.tribuneindia.com/news/defence/brahmos-turns-25-a-look-at-the-evolution-of-indias-supersonic-cruise-missile/
+- The Tribune, 13 Feb 2025, four countries interested — https://www.tribuneindia.com/news/india/4-more-countries-show-interest-in-brahmos-missile
+- The Tribune, Jan 2022, Philippines contract — https://www.tribuneindia.com/news/nation/india-gets-first-ever-export-order-for-brahmos-missiles-philippines-signs-usd-374-million-contract
+- The Week, 18 Oct 2025 — https://www.theweek.in/news/defence/2025/10/18/operation-sindoor-was-just-a-trailer-with-brah-mos-habitual-winners-india-can-strike-pakistan-s-every-inch-defence-minister-at-lucknow.html
+- Business Standard, 4 Nov 2025, BrahMos-NG — https://www.business-standard.com/amp/blueprint-defence-magazine/reports/a-compact-missile-for-wider-use-125110401395_1.html
+- Business Standard, 23 Aug 2022, three IAF officers dismissed — https://bsppd.business-standard.com/amp/article/current-affairs/3-iaf-officers-sacked-for-accidentally-firing-missile-into-pak-in-march-122082301035_1.html
+- CSIS Missile Threat, Tomahawk specifications — https://missilethreat.csis.org/missile/tomahawk/
+
+Missile drawings are stylised blueprint line art, not to scale and not engineering drawings. Maps are schematic: no boundaries are shown.
+Audio: English and Hindi (choose in the player's audio track settings).
+
+TAGS
+BrahMos, BrahMos missile, supersonic cruise missile, DRDO, BrahMos Aerospace, P-800 Oniks, cruise missile explained, Tomahawk vs BrahMos, Kalibr, Exocet, Harpoon, YJ-18, Zircon, sea skimming, fire and forget, MTCR, BrahMos NG, BrahMos Philippines, BrahMos Vietnam, BrahMos Indonesia, Indian defence exports, Operation Sindoor, Indian Navy, Indian Air Force, India's Defence Decoded, Gyaan-X Studios
+
+#BrahMos #IndianDefence #DRDO #Missile #DefenceExports #GyaanXstudios
+
+=== HINDI ===
+TITLE
+ब्रह्मोस: समुद्र से दस मीटर ऊपर, मैक 3 की रफ़्तार | India's Defence, Decoded एपिसोड 2
+
+SHORT DESCRIPTION
+13 नवंबर 2026 की स्थिति। ब्रह्मोस वह मिसाइल है जो भारत ने रूस के साथ मिलकर बनाई, जिसका नाम दो नदियों से आया, और जो अपनी श्रेणी का पहला हथियार है जिसे भारत ने विदेश में बेचा। इस एपिसोड में: यह आई कहाँ से (मॉस्को, 1998), यह कर क्या सकती है, टॉमहॉक और कैलिबर जैसी मिसाइलों से तुलना, 2022 की दुर्घटनावश फ़ायरिंग, ऑपरेशन सिंदूर पर आधिकारिक रूप से क्या दर्ज है और क्या नहीं, और किन देशों ने इसे ख़रीदा है।
+
+सोर्सिंग पर एक नोट: रक्षा मंत्रालय ने ऑपरेशन सिंदूर में इस्तेमाल हुए हथियारों की सूची जारी नहीं की है। मिसाइलों और एयरबेसों की संख्या बताने वाले आंकड़े मीडिया रिपोर्टें हैं, आधिकारिक बयान नहीं।
