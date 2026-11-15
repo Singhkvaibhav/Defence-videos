@@ -18,3 +18,4 @@ episodes/*/thumb_*.png
 episodes/*/small.mp4
 episodes/*/ffmpeg2pass*
 episodes/*/concat.txt
+episodes/*/scan/
