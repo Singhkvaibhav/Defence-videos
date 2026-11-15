@@ -6,7 +6,8 @@ import re
 from engine.core import W, H, FPS, TOTAL, LEAD, C, ease, seg, rgba, caption
 
 def split_caption(text, maxc=130):
-    sents = re.split(r'(?<=[.?!])\s+', text.strip())
+    # sentence ends; '।' for Hindi. Don't break after an abbreviation or an initial.
+    sents = re.split(r'(?<=[.?!।])(?<!\bDr\.)(?<!\bMr\.)(?<!\bSt\.)(?<!\bNo\.)(?<!डॉ\.)(?<![A-Z]\.)\s+', text.strip())
     out = []
     for s in sents:
         while len(s) > 190:

@@ -193,7 +193,7 @@ def _ts(x):
     return f"{h:02d}:{m:02d}:{int(s):02d},{int(round((s-int(s))*1000)) % 1000:03d}"
 
 def _chunks(text, maxc=90):
-    sents = [s for s in re.split(r'(?<=[.?!।])\s+', text.strip()) if s]
+    sents = [s for s in re.split(r'(?<=[.?!।])(?<!\bDr\.)(?<!\bMr\.)(?<!\bSt\.)(?<!\bNo\.)(?<!डॉ\.)(?<![A-Z]\.)\s+', text.strip()) if s]
     out = []
     for s in sents:
         while len(s) > maxc*1.5:

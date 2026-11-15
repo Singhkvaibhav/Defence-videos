@@ -1,0 +1,66 @@
+=== ENGLISH ===
+TITLE
+How India Actually Built an ICBM: Agni-5 and MIRV | India's Defence, Decoded Ep 3
+
+SHORT DESCRIPTION
+As of 15 November 2026. On 8 May 2026 something went up off the Odisha coast and nobody said what it was. A full day later the Defence Ministry called it "an advanced Agni missile carrying MIRV". This episode explains what MIRV actually is (in plain language, before any acronym), how India got from almost no missile industry in 1983 to an intercontinental missile, what Agni-5 really is, why a country that promises never to strike first would want many warheads on one missile, and where analysts disagree about all of it.
+
+CHAPTERS
+0:00 The mystery missile: 8 May 2026
+0:38 What MIRV actually is, in plain language
+1:26 Why engineers call it "the bus"
+1:48 Four questions
+2:05 1983: a programme starting from almost nothing
+3:04 Re-entry: the hard part
+3:24 The ladder: Agni-1 to Agni-5
+4:13 Why range decides who takes you seriously
+4:30 What Agni-5 actually is
+4:57 Six hours, or under twenty minutes
+5:25 Why it moves by road
+5:46 Mission Divyastra: 11 March 2024
+6:10 The 8 May 2026 test
+6:34 What the Ministry did not say
+6:54 The defender's problem
+7:19 Who else can do this
+7:56 India's nuclear doctrine: 4 January 2003
+8:51 Who decides: the Nuclear Command Authority
+9:40 Why the doctrine explains the hardware
+10:06 Where analysts disagree
+11:10 What's next: Agni-Prime, Agni-6
+11:58 Agni-5 in three words
+12:29 Next episode
+
+A NOTE ON SOURCING
+The Defence Ministry did not name the variant, the range, or the number of warheads in the 8 May 2026 test, and the video says so on screen. The official range figure is "in excess of 5,000 km"; the higher estimates quoted are outside analysts', and the exact figure is classified. "Under twenty minutes" is a standard ballistic flight-time approximation. Agni-6 is reported, not announced. The stability debate is given both sides, with the analyst and his institute named.
+
+SOURCES (pages opened)
+- PIB, 11 Mar 2024, Mission Divyastra — https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2013549&reg=48&lang=2
+- PIB archive, 4 Jan 2003, Cabinet Committee on Security review of the nuclear doctrine and command structure — https://archive.pib.gov.in/archive/releases98/lyr2003/rjan2003/04012003/r040120033.html
+- News On AIR, 13 Mar 2024 — https://www.newsonair.gov.in/president-vp-pm-congratulate-drdo-on-the-success-of-mission-divyastra
+- MP-IDSA, 11 May 2026, Ajey Lele, "India Tests Agni-5 with MIRV Capability" — https://idsa.in/publisher/comments/india-tests-agni-5-with-mirv-capability
+- India Sentinels, 9 May 2026, Defence Ministry confirms the test — https://www.indiasentinels.com/prime-ministers-office/strategic-forces-command/defence-ministry-confirms-mystery-missile-test-as-advanced-agni-with-mirv-7336
+- Union of Concerned Scientists (David Wright) on the post-boost vehicle, or "bus"
+- Drishti IAS, Agni-5 — https://www.drishtiias.com/daily-updates/daily-news-analysis/agni-5-missile
+- Vajiram & Ravi, Integrated Guided Missile Development Programme — https://vajiramandravi.com/quest-upsc-notes/integrated-guided-missile-development-programme
+- Vajiram & Ravi, Strategic Forces Command — https://vajiramandravi.com/current-affairs/strategic-forces-command/
+
+There are no maps in this episode. Missile drawings are stylised blueprint line art, not to scale and not engineering drawings.
+Audio: English and Hindi (choose in the player's audio track settings).
+
+TAGS
+Agni-5, Agni 5 missile, MIRV, MIRV explained, Agni-V, DRDO, Mission Divyastra, ICBM, intercontinental ballistic missile, India nuclear doctrine, no first use, Nuclear Command Authority, Strategic Forces Command, IGMDP, Abdul Kalam, Agni Prime, Agni-6, re-entry vehicle, ballistic missile explained, missile defence, credible minimum deterrence, Indian defence, India's Defence Decoded, Gyaan-X Studios
+
+#Agni5 #MIRV #DRDO #IndianDefence #NuclearDoctrine #GyaanXstudios
+
+=== HINDI ===
+TITLE
+भारत ने ICBM कैसे बनाई: अग्नि-5 और MIRV | India's Defence, Decoded एपिसोड 3
+
+SHORT DESCRIPTION
+15 नवंबर 2026 की स्थिति। 8 मई 2026 को ओडिशा के तट से कुछ ऊपर उठा और किसी ने नहीं बताया कि वह क्या था। पूरे एक दिन बाद रक्षा मंत्रालय ने इसे "MIRV क्षमता वाली एक उन्नत अग्नि मिसाइल" कहा। इस एपिसोड में: MIRV असल में है क्या (किसी भी शब्द-संक्षेप से पहले, आसान भाषा में), 1983 में लगभग शून्य से शुरू करके भारत अंतरमहाद्वीपीय मिसाइल तक कैसे पहुँचा, अग्नि-5 वास्तव में क्या है, जो देश पहले इस्तेमाल न करने का वादा करता है उसे एक मिसाइल पर कई वॉरहेड क्यों चाहिए, और इस पर विशेषज्ञ कहाँ असहमत हैं।
+
+सोर्सिंग पर एक नोट: 8 मई 2026 के परीक्षण में रक्षा मंत्रालय ने न वेरिएंट का नाम दिया, न रेंज, न वॉरहेड की संख्या — वीडियो में यह स्पष्ट रूप से दिखाया गया है। आधिकारिक रेंज "5,000 किलोमीटर से अधिक" है; इससे ऊँचे आंकड़े बाहरी विश्लेषकों के हैं और असली संख्या वर्गीकृत है। अग्नि-6 की केवल रिपोर्टें हैं, कोई आधिकारिक घोषणा नहीं।
+
+इस एपिसोड में कोई नक्शा नहीं है। ऑडियो: अंग्रेज़ी और हिंदी (प्लेयर की ऑडियो ट्रैक सेटिंग में चुनें)।
+
+#अग्नि5 #MIRV #DRDO #भारतीयरक्षा #GyaanXstudios
