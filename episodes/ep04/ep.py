@@ -21,7 +21,7 @@ BED = 'pulse'
 VOICE_EN = {'length': 0.98, 'noise': (0.72, 0.85), 'gaps': (0.38, 0.22)}
 VOICE_HI = {'length': 0.86, 'noise': (0.72, 0.85), 'gaps': (0.38, 0.22)}
 CRF, PRESET = 17, 'medium'
-EXTRA = {'cold1': .8, 'job3': .5, 'three1': 1.2, 'end1': 2.5}
+EXTRA = {'cold1': .8, 'cold3': .5, 'job3': .5, 'three1': 1.2, 'end1': 2.5}
 HI = _HI
 
 CX, CY = 960, 640          # centre of the ring diagram
@@ -47,33 +47,46 @@ def s_cold(first):
         a = fin(t, .1, .5)*a_out if first == 0 else a_out
         inbound(ctx, t, a*.9)
         sensor_grid(ctx, t, a, p=1. if first > 0 else fin(t, 1.2, 1.2))
-        if first == 0:
-            q = cue(t, 'It was a race against a clock', .3, .5)
+        # the clock (cold2 opens on it)
+        q = cue(t, 'It was a race against a clock', .3, .5)
+        if q > 0:
+            qa = ease(q)*a_out
+            txt(ctx, 'A RACE AGAINST A CLOCK', W/2, 430, 72, B['ice'], qa, 'black', 'c', glow=.9)
+            r = 86; cx2, cy2 = W/2, 560
+            ctx.new_path(); rgba(ctx, B['dim'], qa); ctx.set_line_width(5); ctx.arc(cx2, cy2, r, 0, 2*math.pi); ctx.stroke()
+            ang = -math.pi/2 + 2*math.pi*((t*.9) % 1)
+            stroke_pts(ctx, [(cx2, cy2), (cx2 + r*.8*math.cos(ang), cy2 + r*.8*math.sin(ang))], 1, B['alert'], qa, 5, glow=False)
+        # India's account, in two cards
+        q = cue(t, 'India gave its account of that night', .3, .5)
+        if q > 0:
+            qa = ease(q)*a_out
+            rgba(ctx, B['deep'], .95*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
+            txt(ctx, "INDIA'S ACCOUNT OF THAT NIGHT", W/2, 250, 48, B['ice'], qa, 'black', 'c', glow=.6)
+            txt(ctx, 'PRESS INFORMATION BUREAU · 16 MAY 2025', W/2, 300, 24, B['cyan'], qa, 'bold', 'c', mono=True)
+            for j, (quote, c, col) in enumerate((('"Intercepted and neutralised every inbound projectile."', 'The Press Information Bureau said', B['amber']),
+                                                 ('"Failed to detect and intercept Indian strikes."', 'HQ-9 and HQ-16', B['steel']))):
+                qq = cue(t, c, .2, .5)
+                if qq <= 0: continue
+                qb = ease(qq)*a_out; y = 360 + j*230
+                card(ctx, 180, y, 1560, 190, qb, ('ON AKASHTEER', "ON PAKISTAN'S IMPORTED HQ-9 AND HQ-16")[j], col, p=qq)
+                for i, l in enumerate(wrap(ctx, quote, 42, 1440, 'bold')):
+                    txt(ctx, l, 230, y + 120 + i*52, 42, B['ice'], qb, 'bold')
+        if first > 1:
+            q = cue(t, "That is India's official account", .25, .5)
             if q > 0:
                 qa = ease(q)*a_out
-                txt(ctx, 'A RACE AGAINST A CLOCK', W/2, 430, 72, B['ice'], qa, 'black', 'c', glow=.9)
-                r = 86; cx2, cy2 = W/2, 560
-                ctx.new_path(); rgba(ctx, B['dim'], qa); ctx.set_line_width(5); ctx.arc(cx2, cy2, r, 0, 2*math.pi); ctx.stroke()
-                ang = -math.pi/2 + 2*math.pi*((t*.9) % 1)
-                stroke_pts(ctx, [(cx2, cy2), (cx2 + r*.8*math.cos(ang), cy2 + r*.8*math.sin(ang))], 1, B['alert'], qa, 5, glow=False)
-        else:
-            q = cue(t, 'the Press Information Bureau said something remarkable', .3, .5)
-            if q > 0:
-                qa = ease(q)*a_out
-                rgba(ctx, B['deep'], .93*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
-                card(ctx, 180, 250, 1560, 330, qa, 'PRESS INFORMATION BUREAU · 16 MAY 2025', B['cyan'], p=q)
-                for j, l in enumerate(wrap(ctx, '"Intercepted and neutralised every inbound projectile."', 46, 1440, 'bold')):
-                    txt(ctx, l, 230, 400 + j*58, 46, B['ice'], qa, 'bold')
-                qq = cue(t, "the government's own claim", .2, .4)
+                rgba(ctx, B['deep'], .96*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
+                txt(ctx, "INDIA'S OFFICIAL ACCOUNT, PUBLISHED BY THE GOVERNMENT", W/2, 420, 44, B['ice'], qa, 'black', 'c', glow=.5)
+                qq = cue(t, 'independent verification of the numbers is not public', .2, .45)
                 if qq > 0:
-                    tagb(ctx, 230, 530, "THE GOVERNMENT'S OWN CLAIM · NO INDEPENDENT COUNT PUBLISHED", B['alert'], ease(qq)*a_out, 24)
-            q2 = cue(t, 'Akashteer is not a missile', .2, .5)
-            if q2 > 0:
-                qa = ease(q2)*a_out
-                rgba(ctx, B['deep'], .97*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
-                txt(ctx, 'AKASHTEER IS NOT A MISSILE', W/2, 520, 76, B['amber'], qa, 'black', 'c', glow=1)
-                q3 = cue(t, 'It does not shoot anything', .2, .4)
-                if q3 > 0: txt(ctx, 'IT DOES NOT SHOOT ANYTHING', W/2, 620, 46, B['ice'], ease(q3)*a_out, 'black', 'c')
+                    tagb(ctx, W/2, 510, 'INDEPENDENT VERIFICATION OF THE NUMBERS IS NOT PUBLIC', B['steel'], ease(qq)*a_out, 26, align='c')
+        q2 = cue(t, 'Akashteer is not a missile', .2, .5)
+        if q2 > 0:
+            qa = ease(q2)*a_out
+            rgba(ctx, B['deep'], .97*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
+            txt(ctx, 'AKASHTEER IS NOT A MISSILE', W/2, 520, 76, B['amber'], qa, 'black', 'c', glow=1)
+            q3 = cue(t, 'It does not shoot anything', .2, .4)
+            if q3 > 0: txt(ctx, 'IT DOES NOT SHOOT ANYTHING', W/2, 620, 46, B['ice'], ease(q3)*a_out, 'black', 'c')
         ctx.restore()
     return scene(f)
 
@@ -666,7 +679,7 @@ scene(s_wall)
 
 # ================= beats =================
 SC = {}
-for i, k in enumerate(['cold1', 'cold2']): SC[k] = s_cold(i)
+for i, k in enumerate(['cold1', 'cold2', 'cold3']): SC[k] = s_cold(i)
 for i, k in enumerate(['job1', 'job2', 'job3']): SC[k] = s_job(i)
 SC['qs1'] = s_qs
 for i, k in enumerate(['have1', 'have2', 'have3']): SC[k] = s_have(i)
@@ -689,7 +702,7 @@ for g in ('cold', 'job', 'have', 's400', 'buy', 'kus', 'bmd', 'net', 'mis', 'deb
         if k.startswith(g): GROUPS[k] = g
 
 KEYS = {
- 'cold2': [('intercepted and neutralised every inbound projectile', "GOVERNMENT'S CLAIM", 'alert')],
+ 'cold2': [('intercepted and neutralised every inbound projectile', "INDIA'S ACCOUNT", 'amber')],
  'job1': [('And then it has to shoot', 'SEE · DECIDE · SHOOT', 'amber')],
  'have3': [('forty years later', '40 YEARS LATER', 'cyan')],
  's4001': [('fifth of October 2018', '5 OCT 2018', 'amber')],
@@ -706,8 +719,8 @@ ANNOT = {
 _order = [k for k, _ in EN]
 FX = [('whoosh', k, -.25, .22) for i, k in enumerate(_order) if i and GROUPS.get(k, k) != GROUPS.get(_order[i-1], _order[i-1])]
 FX += [('beep', k, ph, .14) for k, items in KEYS.items() for ph, _, _ in items]
-FX += [('tick', 'cold1', .15, .12), ('riser', 'cold1', 'It was a race against a clock', .3),
-       ('glitch', 'cold2', 'Akashteer is not a missile', .25),
+FX += [('tick', 'cold1', .15, .12), ('riser', 'cold2', 'It was a race against a clock', .3),
+       ('glitch', 'cold3', 'Akashteer is not a missile', .25),
        ('ping', 'job2', 'What you build is a set of rings', .3),
        ('boom', 'job2', 'The outermost ring carries a long-range system', .35),
        ('ping', 'have1', 'The outer ring is the S-400', .25),

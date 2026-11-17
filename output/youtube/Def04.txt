@@ -7,7 +7,8 @@ As of 17 November 2026. Everyone names the S-400. Almost nobody names the thing 
 
 CHAPTERS
 0:00 The night of 9 May 2025
-0:20 "Akashteer is not a missile"
+0:20 India's account of that night
+0:45 "Akashteer is not a missile"
 0:44 Three jobs: see, decide, shoot
 1:10 Forget the word "dome"
 1:35 Why rings, and not one big system
@@ -35,7 +36,7 @@ CHAPTERS
 12:26 Next episode
 
 A NOTE ON SOURCING
-The Press Information Bureau's statement that Akashteer "intercepted and neutralised every inbound projectile" is quoted as the government's own claim; no independent count has been published, and the video says so on screen. The S-400's ~400 km figure is a published range for its longest-reaching missile, not an Indian official statement. Kusha's interceptor ranges are as reported. Agni-6-style speculation about Mission Sudarshan Chakra's contents is not repeated here: beyond the announcement, nothing has been published. There are no maps in this episode — coverage is drawn as abstract rings, never over territory.
+India's account of the night of 9–10 May 2025 is given in full, from the Press Information Bureau release of 16 May 2025: that Akashteer "intercepted and neutralised every inbound projectile", and that Pakistan's imported HQ-9 and HQ-16 systems "failed to detect and intercept Indian strikes". Both are stated as India's official account, and the video notes on screen that independent verification of the numbers is not public. The S-400's ~400 km figure is a published range for its longest-reaching missile, not an Indian official statement. Kusha's interceptor ranges are as reported. Speculation about Mission Sudarshan Chakra's contents is not repeated here: beyond the announcement, nothing has been published. There are no maps in this episode — coverage is drawn as abstract rings, never over territory.
 
 SOURCES (pages opened)
 - PIB, 16 May 2025, "Akashteer: The Unseen Force Behind India's New War Capability" — https://www.pib.gov.in/PressReleasePage.aspx?PRID=2129132&reg=48&lang=2
@@ -62,7 +63,7 @@ TITLE
 SHORT DESCRIPTION
 17 नवंबर 2026 की स्थिति। नाम हर कोई एस-400 का लेता है। लेकिन जो चीज़ असल में तय करती है कि कवच काम करेगा या नहीं, उसका नाम लगभग कोई नहीं लेता। इस एपिसोड में: वायु रक्षा प्रणाली असल में है क्या (तीन काम, कठिनाई के क्रम में), कोई "डोम" क्यों नहीं बनाता, भारत ने क्या खरीदा और अब घर में क्या बना रहा है, बैलिस्टिक मिसाइल रोकना बिलकुल अलग समस्या क्यों है, और मिशन सुदर्शन चक्र 2035 तक असल में वादा क्या कर रहा है।
 
-सोर्सिंग पर एक नोट: पीआईबी का यह कथन कि आकाशतीर ने "हर आने वाले प्रक्षेप्य को रोका और नष्ट किया", सरकार के अपने दावे के रूप में उद्धृत है; कोई स्वतंत्र गिनती प्रकाशित नहीं हुई है, और वीडियो में यह स्क्रीन पर कहा गया है। एस-400 का लगभग 400 किलोमीटर का आँकड़ा उसकी सबसे लंबी दूरी की मिसाइल की प्रकाशित रेंज है। कुशा के इंटरसेप्टर की दूरियाँ रिपोर्ट के अनुसार हैं।
+सोर्सिंग पर एक नोट: 9–10 मई 2025 की रात का भारत का ब्योरा पूरा दिया गया है, पीआईबी की 16 मई 2025 की विज्ञप्ति से: कि आकाशतीर ने "हर आने वाले प्रक्षेप्य को रोका और नष्ट किया", और कि पाकिस्तान की आयातित एचक्यू-9 और एचक्यू-16 प्रणालियाँ "भारतीय हमलों को पकड़ने और रोकने में विफल रहीं"। दोनों भारत के आधिकारिक ब्योरे के रूप में कहे गए हैं, और वीडियो स्क्रीन पर बताता है कि इन आँकड़ों की स्वतंत्र पुष्टि सार्वजनिक नहीं है। एस-400 का लगभग 400 किलोमीटर का आँकड़ा उसकी सबसे लंबी दूरी की मिसाइल की प्रकाशित रेंज है। कुशा के इंटरसेप्टर की दूरियाँ रिपोर्ट के अनुसार हैं।
 
 इस एपिसोड में कोई नक्शा नहीं है। ऑडियो: अंग्रेज़ी और हिंदी (प्लेयर की ऑडियो ट्रैक सेटिंग में चुनें)।
 

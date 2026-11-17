@@ -13,7 +13,7 @@ def rows(tbl, col):
 EN_ROWS = rows(en_tbl, 3); HI_ROWS = rows(hi_tbl, 1)
 assert len(EN_ROWS) == len(HI_ROWS) == 14, (len(EN_ROWS), len(HI_ROWS))
 
-SPLIT = [['cold1','cold2'], ['job1','job2','job3'], ['qs1'], ['have1','have2','have3'],
+SPLIT = [['cold1','cold2','cold3'], ['job1','job2','job3'], ['qs1'], ['have1','have2','have3'],
          ['s4001','s4002','s4003'], ['buy1','buy2'], ['kus1','kus2','kus3','kus4'],
          ['bmd1','bmd2'], ['net1','net2','net3'], ['mis1','mis2'],
          ['deb1','deb2','deb3'], ['st1','st2'], ['three1'], ['end1']]
