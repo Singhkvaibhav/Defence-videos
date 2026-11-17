@@ -1,0 +1,69 @@
+=== ENGLISH ===
+TITLE
+How India Is Actually Building a Missile Shield | S-400, Kusha and Sudarshan Chakra | Ep 4
+
+SHORT DESCRIPTION
+As of 17 November 2026. Everyone names the S-400. Almost nobody names the thing that actually decides whether a shield works. This episode explains what an air defence system really is (three jobs, in order of difficulty), why nobody builds a "dome", what India bought and what it is now building at home, why stopping a ballistic missile is a completely different problem, and what Mission Sudarshan Chakra is actually promising by 2035.
+
+CHAPTERS
+0:00 The night of 9 May 2025
+0:20 "Akashteer is not a missile"
+0:44 Three jobs: see, decide, shoot
+1:10 Forget the word "dome"
+1:35 Why rings, and not one big system
+2:03 Four questions
+2:20 The rings India has
+3:07 Akash, forty years on
+3:31 The S-400: what India signed for
+3:54 What you actually buy
+4:23 CAATSA, and the deliveries that ran late
+4:49 Three things outside your control
+5:31 Project Kusha
+5:55 Three interceptors, one system
+6:17 23 July 2026: the maiden flight
+6:43 A beginning, not a system
+7:04 Why ballistic is a different problem
+7:32 Ballistic Missile Defence, sanctioned in 2000
+8:04 The hard question: seconds to answer
+8:31 IACCS, Akashteer, TRIGUN
+9:09 Why a network beats a better missile
+9:30 Mission Sudarshan Chakra, 15 August 2025
+10:00 What is and isn't public
+10:28 Where people disagree
+11:27 Where it stands, 17 November 2026
+12:07 In three words
+12:26 Next episode
+
+A NOTE ON SOURCING
+The Press Information Bureau's statement that Akashteer "intercepted and neutralised every inbound projectile" is quoted as the government's own claim; no independent count has been published, and the video says so on screen. The S-400's ~400 km figure is a published range for its longest-reaching missile, not an Indian official statement. Kusha's interceptor ranges are as reported. Agni-6-style speculation about Mission Sudarshan Chakra's contents is not repeated here: beyond the announcement, nothing has been published. There are no maps in this episode — coverage is drawn as abstract rings, never over territory.
+
+SOURCES (pages opened)
+- PIB, 16 May 2025, "Akashteer: The Unseen Force Behind India's New War Capability" — https://www.pib.gov.in/PressReleasePage.aspx?PRID=2129132&reg=48&lang=2
+- All India Radio / News On AIR, 24 July 2026, Kusha maiden flight test — https://newsonair.gov.in/drdo-successfully-conducts-maiden-flight-test-of-long-range-surface-to-air-missile-kusha/
+- ThePrint, 23 July 2026, "Project Kusha, India's desi S-400, takes to the skies" — https://theprint.in/defence/project-kusha-indias-desi-s-400-takes-to-the-skies-maiden-test-flight-successful/2994844/
+- The Week, 23 July 2026, Kusha test and interceptor ranges — https://www.theweek.in/news/defence/2026/07/23/indias-kusha-missile-system-capable-of-destroying-fighter-jets-missiles-large-enemy-aircraft-passes-crucial-test.html
+- GS Times, 24 July 2026, Kusha maiden flight test — https://www.gstimes.in/drdo-conducts-successful-maiden-flight-test-of-kusha-long-range-surface-to-air-missile/
+- Business Standard, 15 August 2025, "PM unveils 'Mission Sudarshan Chakra'" — https://www.business-standard.com/external-affairs-defence-security/news/pm-unveils-mission-sudarshan-chakra-pushes-for-made-in-india-jet-engines-125081501136_1.html
+- The Tribune, 22 September 2025, S-400 contract date, value and delivery status — https://www.tribuneindia.com/news/india/russia-will-complete-delivery-of-s-400-missile-systems-to-india-in-2026
+- Swarajya, India's air defence layers during Operation Sindoor — https://swarajyamag.com/defence/inside-indias-air-defence-network-that-stood-tall-during-operation-sindoor
+- Vision IAS, India's Ballistic Missile Defence Programme — https://visionias.in/current-affairs/monthly-magazine/2024-08-22/science-and-technology/indias-ballistic-missile-defence-program
+
+Audio: English and Hindi (choose in the player's audio track settings).
+
+TAGS
+air defence, India air defence, S-400, S-400 India, Sudarshan Chakra, Mission Sudarshan Chakra, Project Kusha, Kusha missile, LR-SAM, DRDO, Akashteer, IACCS, Akash missile, MR-SAM, QRSAM, Barak-8, ballistic missile defence, BMD India, Operation Sindoor air defence, layered air defence, interceptor missile, Indian defence, India's Defence Decoded, Gyaan-X Studios
+
+#AirDefence #S400 #ProjectKusha #Akashteer #SudarshanChakra #GyaanXstudios
+
+=== HINDI ===
+TITLE
+भारत असल में मिसाइल कवच कैसे बना रहा है | एस-400, कुशा और सुदर्शन चक्र | एपिसोड 4
+
+SHORT DESCRIPTION
+17 नवंबर 2026 की स्थिति। नाम हर कोई एस-400 का लेता है। लेकिन जो चीज़ असल में तय करती है कि कवच काम करेगा या नहीं, उसका नाम लगभग कोई नहीं लेता। इस एपिसोड में: वायु रक्षा प्रणाली असल में है क्या (तीन काम, कठिनाई के क्रम में), कोई "डोम" क्यों नहीं बनाता, भारत ने क्या खरीदा और अब घर में क्या बना रहा है, बैलिस्टिक मिसाइल रोकना बिलकुल अलग समस्या क्यों है, और मिशन सुदर्शन चक्र 2035 तक असल में वादा क्या कर रहा है।
+
+सोर्सिंग पर एक नोट: पीआईबी का यह कथन कि आकाशतीर ने "हर आने वाले प्रक्षेप्य को रोका और नष्ट किया", सरकार के अपने दावे के रूप में उद्धृत है; कोई स्वतंत्र गिनती प्रकाशित नहीं हुई है, और वीडियो में यह स्क्रीन पर कहा गया है। एस-400 का लगभग 400 किलोमीटर का आँकड़ा उसकी सबसे लंबी दूरी की मिसाइल की प्रकाशित रेंज है। कुशा के इंटरसेप्टर की दूरियाँ रिपोर्ट के अनुसार हैं।
+
+इस एपिसोड में कोई नक्शा नहीं है। ऑडियो: अंग्रेज़ी और हिंदी (प्लेयर की ऑडियो ट्रैक सेटिंग में चुनें)।
+
+#वायुरक्षा #S400 #कुशा #आकाशतीर #GyaanXstudios
