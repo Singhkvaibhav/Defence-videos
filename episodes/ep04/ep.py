@@ -83,7 +83,7 @@ def s_cold(first):
         q2 = cue(t, 'Akashteer is not a missile', .2, .5)
         if q2 > 0:
             qa = ease(q2)*a_out
-            rgba(ctx, B['deep'], .97*qa); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
+            rgba(ctx, B['deep'], min(1., 1.12*qa)); ctx.rectangle(0, 150, W, H - 150); ctx.fill()
             txt(ctx, 'AKASHTEER IS NOT A MISSILE', W/2, 520, 76, B['amber'], qa, 'black', 'c', glow=1)
             q3 = cue(t, 'It does not shoot anything', .2, .4)
             if q3 > 0: txt(ctx, 'IT DOES NOT SHOOT ANYTHING', W/2, 620, 46, B['ice'], ease(q3)*a_out, 'black', 'c')
@@ -702,7 +702,6 @@ for g in ('cold', 'job', 'have', 's400', 'buy', 'kus', 'bmd', 'net', 'mis', 'deb
         if k.startswith(g): GROUPS[k] = g
 
 KEYS = {
- 'cold2': [('intercepted and neutralised every inbound projectile', "INDIA'S ACCOUNT", 'amber')],
  'job1': [('And then it has to shoot', 'SEE · DECIDE · SHOOT', 'amber')],
  'have3': [('forty years later', '40 YEARS LATER', 'cyan')],
  's4001': [('fifth of October 2018', '5 OCT 2018', 'amber')],
