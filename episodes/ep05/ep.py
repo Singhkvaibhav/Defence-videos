@@ -6,7 +6,7 @@ No flags, no logos, no likenesses. The Dubai beat draws no aircraft at all.
 import os, sys, math, random, cairo
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from engine import core
-TOTAL = 940.0
+TOTAL = 870.0   # measured: 825.4 s of narration (the longer of EN/HI per beat) + ~1.1 s pause each
 core.TOTAL = TOTAL
 from engine.core import W, H, seg, ease, eoc, eob, lerp, T
 from engine.bp import (B, rgba, rrect, bg, txt, tw, typed, wrap, para, stroke_pts, head_pt, rect_pts, fill, glow_dot,
@@ -58,7 +58,7 @@ def s_cold(i):
                 card(ctx, 1290, 250, 520, 190, a*ease(q), 'THE CONTRACT', B['cyan'], ease(q))
                 txt(ctx, '3 FEB 2021', 1320, 350, 46, B['ice'], a*ease(seg(q, .3, 1)), 'black')
                 txt(ctx, '₹48,000 CRORE  ·  83 JETS', 1320, 400, 24, B['steel'], a*ease(seg(q, .5, 1)), 'bold', mono=True)
-            q2 = cue(t, 'The third year was 2024', .2, .5)
+            q2 = cue(t, 'the first three would reach the Air Force in the third year', .2, .5)
             if q2 > 0:
                 card(ctx, 1290, 470, 520, 150, a*ease(q2), 'FIRST DELIVERY DUE', B['steel'], ease(q2))
                 txt(ctx, 'FEBRUARY 2024', 1320, 570, 40, B['ice'], a*ease(seg(q2, .3, 1)), 'black')
@@ -194,7 +194,7 @@ def s_emb(i):
             for k, ln in enumerate(lines):
                 q = ease(seg(t, .6 + k*1.1, 1.6 + k*1.1))
                 if q > 0: txt(ctx, ln, 600, 360 + k*58, 34, B['ice'], a*q, 'bold')
-            c = cue(t, 'bought at a price nobody would have chosen to pay', .25, .6)
+            c = cue(t, 'because nobody else was left to finish it', .25, .6)
             if c > 0: txt(ctx, 'AT A PRICE NOBODY WOULD HAVE CHOSEN TO PAY', 960, 640, 28, B['steel'], a*ease(c), 'bold', 'c', mono=True)
         else:
             jet(ctx, 960, 540, .8, fin(t, .2, 2.2), a)
@@ -325,28 +325,29 @@ def s_f404(i):
                     a*ease(seg(q, .4, 1)), 'bold', mono=True)
             q2 = cue(t, 'The first arrived in March 2025', .25, .6)
             if q2 > 0: tagb(ctx, 830, 540, 'FIRST ENGINE: MARCH 2025 — TWO YEARS LATE', B['alert'], a*ease(q2), 28)
-            q3 = cue(t, 'four had been delivered', .2, .6)
-            if q3 > 0:
-                card(ctx, 830, 600, 900, 240, a*ease(q3), 'DELIVERED BY OCTOBER 2025', B['alert'], ease(q3))
-                txt(ctx, '4', 980, 790, 130, B['alert'], a*ease(seg(q3, .2, 1)), 'black', 'c', glow=1.)
-                txt(ctx, 'AGAINST A PLAN', 1150, 740, 26, B['steel'], a*ease(seg(q3, .4, 1)), 'bold', mono=True)
-                txt(ctx, 'OF 16 A YEAR', 1150, 776, 26, B['steel'], a*ease(seg(q3, .5, 1)), 'bold', mono=True)
-                txt(ctx, 'THE TRIBUNE, AS REPORTED', 1150, 814, 20, B['dim'], a*ease(seg(q3, .6, 1)), 'bold', mono=True)
         else:
-            card(ctx, 830, 240, 900, 300, a, 'WHAT IT IS NOT', B['steel'], 1.)
+            # the punchline is spoken here, so the count lands here
+            q0 = cue(t, 'four had been delivered', .2, .6)
+            if q0 > 0:
+                card(ctx, 830, 215, 900, 235, a*ease(q0), 'DELIVERED BY OCTOBER 2025', B['alert'], ease(q0))
+                txt(ctx, '4', 980, 390, 125, B['alert'], a*ease(seg(q0, .2, 1)), 'black', 'c', glow=1.)
+                txt(ctx, 'AGAINST A PLAN', 1150, 340, 26, B['steel'], a*ease(seg(q0, .4, 1)), 'bold', mono=True)
+                txt(ctx, 'OF 16 A YEAR', 1150, 376, 26, B['steel'], a*ease(seg(q0, .5, 1)), 'bold', mono=True)
+                txt(ctx, 'THE TRIBUNE, AS REPORTED', 1150, 414, 20, B['dim'], a*ease(seg(q0, .6, 1)), 'bold', mono=True)
+            q1 = cue(t, 'That is the entire reason', .2, .6)
             for k, ln in enumerate(('not the airframe', 'not the software', "not HAL's factory floor")):
-                q = ease(seg(t, .4 + k*.6, 1.2 + k*.6))
+                q = ease(seg(q1, .15 + k*.22, .6 + k*.22))
                 if q > 0:
-                    txt(ctx, ln, 880, 370 + k*58, 36, B['steel'], a*q, 'bold')
-                    stroke_pts(ctx, [(872, 358 + k*58), (872 + tw(ctx, ln, 36, 'bold') + 16, 358 + k*58)],
+                    txt(ctx, ln, 870, 510 + k*52, 32, B['steel'], a*q, 'bold')
+                    stroke_pts(ctx, [(864, 500 + k*52), (864 + tw(ctx, ln, 32, 'bold') + 14, 500 + k*52)],
                                ease(seg(q, .4, 1)), B['alert'], a*q*.8, 3, glow=False)
             q2 = cue(t, 'a hundred and thirteen more', .25, .6)
             if q2 > 0:
-                card(ctx, 830, 570, 900, 180, a*ease(q2), 'NOVEMBER 2025', B['cyan'], ease(q2))
-                txt(ctx, '113 MORE ENGINES', 870, 680, 46, B['ice'], a*ease(seg(q2, .2, 1)), 'black')
-                txt(ctx, 'FOR DELIVERY BETWEEN 2027 AND 2032', 870, 722, 23, B['steel'], a*ease(seg(q2, .4, 1)), 'bold', mono=True)
+                card(ctx, 830, 660, 900, 170, a*ease(q2), 'NOVEMBER 2025', B['cyan'], ease(q2))
+                txt(ctx, '113 MORE ENGINES', 870, 762, 44, B['ice'], a*ease(seg(q2, .2, 1)), 'black')
+                txt(ctx, 'FOR DELIVERY BETWEEN 2027 AND 2032', 870, 802, 23, B['steel'], a*ease(seg(q2, .4, 1)), 'bold', mono=True)
             q3 = cue(t, 'why does India not simply build its own', .25, .6)
-            if q3 > 0: txt(ctx, 'SO WHY NOT BUILD OUR OWN?', 960, 880, 48, B['amber'], a*ease(q3), 'black', 'c', glow=.8)
+            if q3 > 0: txt(ctx, 'SO WHY NOT BUILD OUR OWN?', 430, 880, 44, B['amber'], a*ease(q3), 'black', 'c', glow=.8)
     return scene(f)
 
 
@@ -366,10 +367,12 @@ def s_kav(i):
                 txt(ctx, n, x, 400, 58, B['ice'] if k != 2 else B['alert'], a*ease(q), 'black')
                 for j, ln in enumerate(wrap(ctx, lab, 21, 400, 'bold', True)):
                     txt(ctx, ln, x, 446 + j*28, 21, B['steel'], a*ease(seg(q, .3, 1)), 'bold', mono=True)
-            q = cue(t, 'national failure', .25, .6)
-            if q > 0: txt(ctx, 'USUALLY TOLD AS A NATIONAL FAILURE. IT IS HARDER THAN THAT.',
-                          960, 700, 34, B['amber'], a*ease(q), 'black', 'c', glow=.5)
+            q = cue(t, 'delinked from the fighter programme', .25, .6)
+            if q > 0: txt(ctx, 'DELINKED FROM THE FIGHTER PROGRAMME', 960, 700, 34, B['alert'], a*ease(q), 'black', 'c', glow=.5)
         elif i == 1:
+            nf = cue(t, 'national failure', .25, .6)
+            if nf > 0: txt(ctx, 'USUALLY TOLD AS A NATIONAL FAILURE. IT IS HARDER THAN THAT.',
+                           960, 240, 34, B['amber'], a*ease(nf), 'black', 'c', glow=.5)
             stages = [ease(cue(t, 'a compressor squeezes it', .25, .9)),
                       ease(cue(t, 'fuel burns', .25, .9)),
                       ease(cue(t, 'the gas leaves through a turbine', .25, .9))]
@@ -416,11 +419,13 @@ def s_kde(i):
                 txt(ctx, '48.5', 1590, 440, 110, B['amber'], a*ease(seg(q, .2, 1)), 'black', 'c', glow=1.)
                 txt(ctx, 'kN', 1590, 490, 34, B['ice'], a*ease(seg(q, .3, 1)), 'black', 'c')
                 txt(ctx, 'AGAINST A TARGET OF 46', 1590, 550, 22, B['steel'], a*ease(seg(q, .5, 1)), 'bold', 'c', mono=True)
-            g = cue(t, 'Ghatak unmanned combat aircraft', .25, .6)
-            if g > 0: tagb(ctx, 1590, 660, 'FOR THE GHATAK UCAV', B['cyan'], a*ease(g), 26, align='c')
+            g = cue(t, 'against a target of forty-six', .25, .6)
+            if g > 0: tagb(ctx, 1590, 660, 'ABOVE ITS OWN TARGET', B['cyan'], a*ease(g), 26, align='c')
         else:
-            q = cue(t, 'That is not an engine for Tejas', .2, .6)
-            txt(ctx, 'NOT AN ENGINE FOR TEJAS', 960, 330, 52, B['steel'], a*ease(fin(t, .2, .8)), 'black', 'c')
+            g = cue(t, 'Ghatak unmanned combat aircraft', .2, .6)
+            if g > 0: tagb(ctx, 960, 250, 'FOR THE GHATAK UCAV · CERTIFICATION AND INTEGRATION AHEAD', B['cyan'], a*ease(g), 26, align='c')
+            txt(ctx, 'NOT AN ENGINE FOR TEJAS', 960, 350, 52, B['steel'],
+                a*ease(cue(t, 'That is not an engine for Tejas', .2, .6)), 'black', 'c')
             q2 = cue(t, 'flew and beat its own target', .25, .7)
             if q2 > 0:
                 txt(ctx, 'AN INDIAN-DESIGNED MILITARY TURBOFAN', 960, 470, 48, B['ice'], a*ease(q2), 'black', 'c', glow=.5)
@@ -641,8 +646,8 @@ KEYS = {
  'why1': [('five hundred and sixty crore rupees', '₹560 CRORE', 'amber')],
  'emb1': [('May 1998', 'MAY 1998', 'alert')],
  'emb3': [('fourth of January 2001', '4 JAN 2001', 'amber')],
- 'mk1a2': [('a hundred and eighty aircraft', '180 AIRCRAFT', 'amber')],
- 'f4041': [('four had been delivered', 'FOUR ENGINES', 'alert')],
+ 'mk1a3': [('a hundred and eighty aircraft', '180 AIRCRAFT', 'amber')],
+ 'f4042': [('four had been delivered', 'FOUR ENGINES', 'alert')],
  'kav1': [('about seventy-two kilonewtons', '72 kN', 'steel')],
  'kde2': [('forty-eight point five kilonewtons', '48.5 kN', 'amber')],
  'sqn1': [('thirty-one', '31 SQUADRONS', 'alert')],
@@ -658,13 +663,13 @@ FX += [('beep', k, ph, .14) for k, items in KEYS.items() for ph, _, _ in items]
 FX += [('tick', 'cold1', .15, .12),
        ('glitch', 'cold2', 'the number handed over is zero', .3),
        ('riser', 'cold2', 'What most of them do not have is an engine', .25),
-       ('ping', 'four1', 'Four: power', .3),
+       ('ping', 'four2', 'Four: power', .3),
        ('stamp', 'why1', 'In August 1983 the government sanctioned', .3),
        ('glitch', 'emb1', 'Their engineers went home', .3),
        ('riser', 'emb3', 'The aircraft flew on the fourth of January 2001', .2),
        ('boom', 'emb3', 'The aircraft flew on the fourth of January 2001', .5),
-       ('stamp', 'mk1a2', 'twenty-fifth of September 2025', .3),
-       ('glitch', 'f4041', 'four had been delivered', .35),
+       ('stamp', 'mk1a3', 'twenty-fifth of September 2025', .3),
+       ('glitch', 'f4042', 'four had been delivered', .35),
        ('boom', 'kav2', 'hotter than the temperature at which the turbine blades would melt', .3),
        ('riser', 'kde2', 'Peak dry thrust', .2),
        ('ding', 'kde2', 'against a target of forty-six', .25),

@@ -171,20 +171,29 @@ def turbine_cut(ctx, cx, cy, s, a, stages, hot=0.):
 def testbed(ctx, cx, cy, s, a, p=1., hi=1, t=0.):
     """a generic four-engine transport in side-on line art with one engine highlighted"""
     ctx.save(); ctx.translate(cx, cy); ctx.scale(s, s)
-    body = [(-420, 0), (-380, -46), (260, -52), (380, -36), (420, -6), (400, 26), (-340, 30), (-420, 0)]
+    # fuselage, nose to the right
+    body = [(-400, -34), (-360, -62), (300, -62), (392, -42), (424, -12), (392, 14), (-360, 14), (-400, -34)]
     stroke_pts(ctx, body, p, B['ice'], a, 3)
-    stroke_pts(ctx, [(60, -52), (190, -170), (250, -170), (170, -52)], seg(p, .4, 1), B['ice'], a, 3)   # fin
-    wing = [(-120, -10), (-210, 120), (-100, 124), (40, -4)]
-    stroke_pts(ctx, wing, seg(p, .3, 1), B['ice'], a, 3)
+    # flight deck
+    stroke_pts(ctx, [(330, -56), (384, -40)], seg(p, .25, .8), B['cyan'], a*.8, 2, glow=False)
+    # tail fin and tailplane
+    stroke_pts(ctx, [(-352, -62), (-300, -196), (-244, -196), (-236, -62)], seg(p, .35, .9), B['ice'], a, 3)
+    stroke_pts(ctx, [(-330, -186), (-190, -176)], seg(p, .45, .95), B['ice'], a, 2.5, glow=False)
+    # high wing, swept back and down towards the viewer
+    wing = [(60, -54), (104, -44), (-120, 96), (-206, 92), (60, -54)]
+    stroke_pts(ctx, wing, seg(p, .3, .9), B['ice'], a, 3)
+    # two engine pods slung under the wing; the inboard one carries the test engine
     for k in range(2):
-        ex = -150 - k*70; ey = 60 + k*34
+        ex = -6 - k*96; ey = 24 + k*40
         on = (k == 0 and hi == 1)
         col = B['amber'] if on else B['dim']
-        q = seg(p, .55 + k*.1, .9 + k*.1)
+        q = seg(p, .55 + k*.12, .92 + k*.12)
         if q <= 0: continue
-        stroke_pts(ctx, rect_pts(ex - 34, ey - 18, 68, 36), q, col, a, 2.5)
+        stroke_pts(ctx, [(ex + 4, ey - 26), (ex - 10, ey - 6)], q, B['dim'], a*.8, 2.5, glow=False)   # pylon
+        stroke_pts(ctx, rect_pts(ex - 44, ey - 4, 88, 38), q, col, a, 2.5)
+        stroke_pts(ctx, [(ex - 30, ey - 4), (ex - 30, ey + 34)], q, col, a*.7, 1.8, glow=False)
         if on:
-            glow_dot(ctx, ex, ey, 7, B['amber'], a*(.6 + .4*math.sin(t*4)))
+            glow_dot(ctx, ex + 24, ey + 15, 7, B['amber'], a*(.6 + .4*math.sin(t*4)))
     ctx.restore()
 
 
