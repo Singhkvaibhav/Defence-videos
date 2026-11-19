@@ -1,0 +1,648 @@
+1
+00:00:00,900 --> 00:00:07,392
+On the third of February 2021, India signed the largest contract for home-made defence equipment in its history.
+
+2
+00:00:07,392 --> 00:00:09,403
+Forty-eight thousand crore rupees.
+
+3
+00:00:09,403 --> 00:00:12,620
+Eighty-three fighter jets, designed and built in India.
+
+4
+00:00:12,620 --> 00:00:20,216
+The Press Information Bureau said the first three would reach the Air Force in the third year, then sixteen a year after that.
+
+5
+00:00:22,167 --> 00:00:23,997
+The third year was 2024.
+
+6
+00:00:23,997 --> 00:00:29,195
+As of the nineteenth of November 2026, the number handed over is zero.
+
+7
+00:00:29,195 --> 00:00:31,391
+And here is the strange part.
+
+8
+00:00:31,391 --> 00:00:32,855
+The aircraft exist.
+
+9
+00:00:32,855 --> 00:00:38,493
+In September 2025, HAL officials told reporters that ten were already built.
+
+10
+00:00:38,493 --> 00:00:41,860
+Wings, radar, ejection seats, serial numbers.
+
+11
+00:00:41,860 --> 00:00:45,382
+What most of them do not have is an engine.
+
+12
+00:00:47,100 --> 00:00:49,679
+So, the useful version of this story.
+
+13
+00:00:49,679 --> 00:00:53,546
+A country building a fighter is not solving one problem.
+
+14
+00:00:53,546 --> 00:00:54,904
+It is solving four.
+
+15
+00:00:54,904 --> 00:00:58,161
+One: shape — airframe, aerodynamics, materials.
+
+16
+00:00:58,161 --> 00:00:59,111
+Two: control.
+
+17
+00:00:59,111 --> 00:01:07,689
+A modern fighter is deliberately unstable, because an unstable aircraft turns faster, and that means no human can fly it.
+
+18
+00:01:10,667 --> 00:01:19,411
+Computers correct it dozens of times a second, and that software, the flight control law, is some of the hardest code anyone writes.
+
+19
+00:01:19,411 --> 00:01:23,224
+Three: sensing — radar, electronic warfare, seeing first.
+
+20
+00:01:23,224 --> 00:01:24,078
+Four: power.
+
+21
+00:01:24,078 --> 00:01:24,867
+The engine.
+
+22
+00:01:24,867 --> 00:01:31,150
+Hold those four, because the next forty years is the story of India solving three of them.
+
+23
+00:01:34,500 --> 00:01:35,554
+Four questions.
+
+24
+00:01:35,554 --> 00:01:37,464
+Why did India start in 1983?
+
+25
+00:01:37,464 --> 00:01:39,506
+What nearly killed it halfway?
+
+26
+00:01:39,506 --> 00:01:42,470
+What is the Mark 1A everyone is waiting for?
+
+27
+00:01:42,470 --> 00:01:48,237
+And the big one: can a country that builds the aircraft learn to build the engine?
+
+28
+00:01:51,600 --> 00:01:59,615
+By the early 1980s the Air Force's backbone was the MiG-21 — hundreds of them, Soviet-designed, licence-built here, and ageing.
+
+29
+00:01:59,615 --> 00:02:05,314
+India had two choices: buy the replacement abroad, as it always had, or learn to make one.
+
+30
+00:02:05,314 --> 00:02:10,198
+In August 1983 the government sanctioned the Light Combat Aircraft programme,
+
+31
+00:02:10,198 --> 00:02:15,570
+with five hundred and sixty crore rupees for the project definition phase alone.
+
+32
+00:02:20,733 --> 00:02:27,750
+A new body, the Aeronautical Development Agency, would design it; Hindustan Aeronautics Limited would build it.
+
+33
+00:02:27,750 --> 00:02:29,379
+Be clear what that meant.
+
+34
+00:02:29,379 --> 00:02:33,201
+India had licence-built other people's aircraft for decades.
+
+35
+00:02:33,201 --> 00:02:40,406
+This was a clean-sheet, unstable, fly-by-wire, composite-heavy fighter, in a country with no modern avionics base,
+
+36
+00:02:40,406 --> 00:02:45,856
+no composites industry at scale, and no engine house with a working military turbofan.
+
+37
+00:02:45,856 --> 00:02:48,412
+First flight was targeted for 1994.
+
+38
+00:02:55,400 --> 00:03:02,640
+Then, in May 1998, India tested nuclear weapons at Pokhran, and the United States imposed a technology embargo.
+
+39
+00:03:02,640 --> 00:03:07,295
+Lockheed Martin and General Electric had both agreed to lend expertise.
+
+40
+00:03:07,295 --> 00:03:09,040
+Their engineers went home.
+
+41
+00:03:09,040 --> 00:03:15,223
+One Indian account of that period says the withdrawal turned the clock back by four years.
+
+42
+00:03:17,367 --> 00:03:19,958
+You can read that two ways, and both are true.
+
+43
+00:03:19,958 --> 00:03:24,589
+It was a serious setback, and a first flight already a decade late slipped further.
+
+44
+00:03:24,589 --> 00:03:29,220
+It was also the moment the programme could no longer outsource its hardest problem.
+
+45
+00:03:29,220 --> 00:03:35,970
+The flight control work had to be finished in India, by Indian engineers, because nobody else was left to finish it.
+
+46
+00:03:40,867 --> 00:03:46,869
+India has that capability permanently now, bought at a price nobody would have chosen to pay.
+
+47
+00:03:46,869 --> 00:03:52,743
+The aircraft flew on the fourth of January 2001 — eighteen years after the programme began.
+
+48
+00:03:52,743 --> 00:03:57,257
+In 2003 the Prime Minister, Atal Bihari Vajpayee, named it Tejas.
+
+49
+00:03:58,400 --> 00:04:00,593
+Now the thing most people get wrong.
+
+50
+00:04:00,593 --> 00:04:04,149
+A first flight is not the finish line; it is about halfway.
+
+51
+00:04:04,149 --> 00:04:11,439
+Between a prototype in the air and a squadron on alert sit thousands of test flights, weapons trials and two certificates.
+
+52
+00:04:11,439 --> 00:04:15,825
+Initial Operational Clearance says the aircraft is safe and useful enough
+
+53
+00:04:15,825 --> 00:04:20,570
+to fly properly — Tejas got one in 2011 and a fuller one in December 2013.
+
+54
+00:04:21,700 --> 00:04:26,534
+Final Operational Clearance says it can do everything it was specified to do:
+
+55
+00:04:26,534 --> 00:04:30,190
+all the weapons, air-to-air refuelling, the full envelope.
+
+56
+00:04:30,190 --> 00:04:33,836
+That came at Aero India in February 2019, years late.
+
+57
+00:04:52,967 --> 00:04:58,203
+In between, on the first of July 2016, Number 45 Squadron, the Flying Daggers,
+
+58
+00:04:58,203 --> 00:05:03,770
+became the first Tejas unit, and Number 18, the Flying Bullets, the second in 2020.
+
+59
+00:05:03,770 --> 00:05:07,018
+Forty aircraft were ordered in that first batch.
+
+60
+00:05:07,018 --> 00:05:15,369
+As of September 2025, reporting said thirty-two fighters and six of the eight trainers had arrived — an order from the 2000s,
+
+61
+00:05:15,369 --> 00:05:18,122
+still closing out two decades later.
+
+62
+00:05:19,233 --> 00:05:20,648
+So what is the Mark 1A?
+
+63
+00:05:20,648 --> 00:05:26,368
+Not a new aircraft — the same airframe, with the parts that decide a modern air battle replaced.
+
+64
+00:05:26,368 --> 00:05:35,508
+The Press Information Bureau lists four: an AESA radar, electronically scanned with no moving parts, tracking many targets at once and much harder to jam;
+
+65
+00:05:35,508 --> 00:05:43,591
+an electronic warfare suite; a beyond-visual-range missile, so it can shoot at what it has not yet seen; and air-to-air refuelling.
+
+66
+00:05:51,233 --> 00:05:55,590
+The 2021 contract was for seventy-three fighters and ten trainers.
+
+67
+00:05:57,200 --> 00:06:09,975
+Then, on the twenty-fifth of September 2025, the Defence Ministry signed for ninety-seven more — sixty-eight single-seat, twenty-nine twin-seat — at over sixty-two thousand three hundred and seventy crore rupees,
+
+68
+00:06:09,975 --> 00:06:13,034
+with indigenous content above sixty-four per cent,
+
+69
+00:06:13,034 --> 00:06:19,332
+and this time India's own Uttam AESA radar and the Swayam Raksha Kavach suite in place of imported ones.
+
+70
+00:06:19,332 --> 00:06:21,791
+Together: a hundred and eighty aircraft.
+
+71
+00:06:21,791 --> 00:06:23,950
+On paper, about ten squadrons.
+
+72
+00:06:25,067 --> 00:06:29,532
+Which brings us to the fourth problem, the one India did not solve.
+
+73
+00:06:29,532 --> 00:06:33,932
+Tejas is powered by the General Electric F404, an American engine.
+
+74
+00:06:33,932 --> 00:06:40,565
+In January 2021 HAL ordered ninety-nine of them for about seven hundred and sixteen million dollars,
+
+75
+00:06:40,565 --> 00:06:44,177
+with deliveries due from April 2023 at sixteen a year.
+
+76
+00:06:44,177 --> 00:06:47,695
+The first arrived in March 2025, two years late.
+
+77
+00:06:50,533 --> 00:06:55,740
+The Tribune reported that by October 2025, four had been delivered.
+
+78
+00:06:55,740 --> 00:06:56,200
+Four.
+
+79
+00:06:56,200 --> 00:07:05,006
+That is the entire reason an aircraft contracted in 2021 had not been handed over by late 2026 — not the airframe,
+
+80
+00:07:05,006 --> 00:07:08,299
+not the software, not HAL's factory floor.
+
+81
+00:07:08,299 --> 00:07:15,726
+In November 2025 HAL signed for a hundred and thirteen more, for delivery between 2027 and 2032.
+
+82
+00:07:15,726 --> 00:07:19,472
+So: why does India not simply build its own?
+
+83
+00:07:20,600 --> 00:07:21,176
+It tried.
+
+84
+00:07:21,176 --> 00:07:26,019
+DRDO's Gas Turbine Research Establishment spent decades on an engine called Kaveri.
+
+85
+00:07:26,019 --> 00:07:29,939
+Reports put the thrust it reached at about seventy-two kilonewtons,
+
+86
+00:07:29,939 --> 00:07:37,214
+against the eighty-three to eighty-five the aircraft needed, and in 2008 Kaveri was delinked from the fighter programme.
+
+87
+00:07:39,167 --> 00:07:42,799
+That is where the story usually gets told as a national failure.
+
+88
+00:07:42,799 --> 00:07:44,979
+Understand why it is harder than that.
+
+89
+00:07:44,979 --> 00:07:48,947
+A jet engine is probably the hardest object a country can manufacture.
+
+90
+00:07:48,947 --> 00:07:54,256
+Air enters the front, a compressor squeezes it to many times atmospheric pressure, fuel burns,
+
+91
+00:07:54,256 --> 00:08:01,430
+and the gas leaves through a turbine — and that gas is hotter than the temperature at which the turbine blades would melt.
+
+92
+00:08:04,967 --> 00:08:10,321
+They survive because each blade is grown as a single crystal of nickel alloy, coated in ceramic,
+
+93
+00:08:10,321 --> 00:08:16,528
+and cooled by air bled through tiny holes inside it, spinning for thousands of hours without failing once.
+
+94
+00:08:21,367 --> 00:08:28,449
+You also need the places to prove it: high-altitude test beds, a flying testbed, a certification chain.
+
+95
+00:08:28,449 --> 00:08:31,785
+India had almost none of that when Kaveri began.
+
+96
+00:08:31,785 --> 00:08:32,698
+And yet.
+
+97
+00:08:35,100 --> 00:08:43,788
+On the first of October 2026 it was reported that the Kaveri Derivative Engine — the version without an afterburner — had been tested in Russia,
+
+98
+00:08:43,788 --> 00:08:47,622
+on the ground and then in the air, on a modified Il-76 testbed.
+
+99
+00:08:47,622 --> 00:08:52,955
+Peak dry thrust: forty-eight point five kilonewtons, against a target of forty-six.
+
+100
+00:08:55,100 --> 00:09:00,304
+It is meant for the Ghatak unmanned combat aircraft, with certification and integration still ahead.
+
+101
+00:09:00,304 --> 00:09:02,005
+That is not an engine for Tejas.
+
+102
+00:09:02,005 --> 00:09:06,230
+But it is an Indian-designed military turbofan that flew and beat its own target,
+
+103
+00:09:06,230 --> 00:09:11,012
+and that is a different sentence from the one India has been writing for thirty years.
+
+104
+00:09:14,100 --> 00:09:16,708
+So the ambition now runs on three tracks.
+
+105
+00:09:16,708 --> 00:09:17,950
+One: licence-build.
+
+106
+00:09:17,950 --> 00:09:26,210
+The GE F414, the engine chosen for Tejas Mark 2, is to be made in India by HAL under a reported eighty per cent technology transfer.
+
+107
+00:09:26,210 --> 00:09:34,831
+That gives India the factory — though defence sources are clear that building someone else's engine is not the same as designing one.
+
+108
+00:09:37,733 --> 00:09:38,797
+Two: co-develop.
+
+109
+00:09:38,797 --> 00:09:47,180
+For the fifth-generation AMCA, India wants a new engine of a hundred and twenty kilonewtons or more, designed with a foreign partner.
+
+110
+00:09:47,180 --> 00:09:53,686
+Rolls-Royce and Safran are the two left in the running, and Rolls-Royce's pitch, reported in June 2026,
+
+111
+00:09:53,686 --> 00:10:01,806
+offers full technology transfer with the intellectual property staying in India, a core test by 2030 and production by 2036.
+
+112
+00:10:03,833 --> 00:10:05,661
+No partner has been announced.
+
+113
+00:10:05,661 --> 00:10:10,556
+Three: build our own, from the bottom up, starting with a drone engine that works.
+
+114
+00:10:10,556 --> 00:10:13,328
+Watch which of the three the government signs.
+
+115
+00:10:13,328 --> 00:10:19,702
+That choice decides whether India owns a jet engine in the 2030s, or rents one for another generation.
+
+116
+00:10:24,433 --> 00:10:27,733
+Why does this matter beyond a factory schedule?
+
+117
+00:10:27,733 --> 00:10:28,558
+Arithmetic.
+
+118
+00:10:28,558 --> 00:10:33,782
+The Air Force is authorised to hold forty-two and a half fighter squadrons.
+
+119
+00:10:33,782 --> 00:10:42,031
+In September 2025, reporting put the real number at thirty-one, falling to twenty-nine as two MiG-21 squadrons retired.
+
+120
+00:10:42,031 --> 00:10:48,243
+The MiG-21 that Tejas was conceived in 1983 to replace has now left service entirely.
+
+121
+00:10:50,500 --> 00:10:53,359
+Tejas was meant to arrive as those aircraft left.
+
+122
+00:10:53,359 --> 00:10:59,936
+The old ones went first, the new ones are late, and the gap between them is the squadron shortfall you read about.
+
+123
+00:10:59,936 --> 00:11:02,395
+Every month of engine delay keeps it open.
+
+124
+00:11:02,395 --> 00:11:05,311
+That is not an argument against building your own.
+
+125
+00:11:05,311 --> 00:11:08,527
+It is an argument about the cost of starting late.
+
+126
+00:11:11,500 --> 00:11:15,309
+One more thing belongs here, and it should be said carefully.
+
+127
+00:11:15,309 --> 00:11:21,022
+On the twenty-first of November 2025, a Tejas crashed during a display at the Dubai Airshow.
+
+128
+00:11:21,022 --> 00:11:24,217
+The pilot, Wing Commander Namansh Syal, was killed.
+
+129
+00:11:24,217 --> 00:11:27,097
+The Air Force ordered a court of inquiry.
+
+130
+00:11:32,900 --> 00:11:40,110
+As of the nineteenth of November 2026 it had not reported publicly, and senior officers say the investigation is still under way.
+
+131
+00:11:40,110 --> 00:11:45,490
+So there is nothing to tell you about the cause, and anyone who tells you otherwise is guessing.
+
+132
+00:11:45,490 --> 00:11:49,728
+It is here because it happened, and leaving it out would be dishonest.
+
+133
+00:11:53,833 --> 00:11:56,349
+And here informed people genuinely disagree.
+
+134
+00:11:56,349 --> 00:12:06,693
+The case for patience: every country that builds fighters took decades and had its own disasters doing it, and India now owns design authority over a modern combat aircraft — airframe,
+
+135
+00:12:06,693 --> 00:12:12,285
+flight control laws, increasingly the radar — which no amount of buying abroad would have given it,
+
+136
+00:12:12,285 --> 00:12:16,107
+and which compounds into Mark 2 and the fifth-generation AMCA.
+
+137
+00:12:19,233 --> 00:12:24,888
+The case for urgency: squadrons are falling now, the threat does not wait for a learning curve,
+
+138
+00:12:24,888 --> 00:12:32,903
+and a programme that signs a contract in 2021 and delivers nothing by late 2026 has an accountability problem whoever is at fault.
+
+139
+00:12:35,500 --> 00:12:43,654
+Some add that depending on an American engine for an aircraft built to end foreign dependence is the sharpest irony in Indian defence.
+
+140
+00:12:43,654 --> 00:12:47,640
+Notice what neither side says: nobody argues the aircraft is bad.
+
+141
+00:12:47,640 --> 00:12:49,692
+They are arguing about time.
+
+142
+00:12:50,833 --> 00:12:53,765
+So, as of the nineteenth of November 2026.
+
+143
+00:12:53,765 --> 00:13:00,173
+Mark 1: forty ordered, thirty-two fighters and most trainers delivered, two squadrons flying.
+
+144
+00:13:00,173 --> 00:13:05,491
+Mark 1A: a hundred and eighty on order across two contracts, airframes built,
+
+145
+00:13:05,491 --> 00:13:12,813
+deliveries not begun — reporting points to the first handovers around January 2027, before Aero India.
+
+146
+00:13:14,600 --> 00:13:19,376
+Engines: four delivered by October 2025 against a plan of sixteen a year,
+
+147
+00:13:19,376 --> 00:13:23,700
+with a second contract for a hundred and thirteen running to 2032.
+
+148
+00:13:23,700 --> 00:13:30,712
+Production: a third assembly line at Nashik takes HAL's stated capacity to twenty-four aircraft a year.
+
+149
+00:13:31,833 --> 00:13:36,117
+Mark 2: prototypes in assembly, first flight targeted for 2027.
+
+150
+00:13:36,117 --> 00:13:41,471
+And the engine: Kaveri's dry derivative has flown and beaten its thrust target,
+
+151
+00:13:41,471 --> 00:13:48,062
+the F414 is to be licence-built in India, and the AMCA engine partner has not been announced.
+
+152
+00:13:50,267 --> 00:13:57,454
+If you remember one thing from this episode, make it the three jobs a country has to do to own a fighter aircraft.
+
+153
+00:13:57,454 --> 00:13:57,954
+Design.
+
+154
+00:13:57,954 --> 00:13:58,392
+Build.
+
+155
+00:13:58,392 --> 00:13:58,829
+Power.
+
+156
+00:13:58,829 --> 00:14:00,329
+India can do the first.
+
+157
+00:14:00,329 --> 00:14:01,891
+India can do the second.
+
+158
+00:14:01,891 --> 00:14:07,641
+The third is the whole story — and after forty years it has stopped being an empty outline.
+
+159
+00:14:07,641 --> 00:14:09,316
+It is half filled in.
+
+160
+00:14:13,433 --> 00:14:15,014
+Five cards on the wall.
+
+161
+00:14:15,014 --> 00:14:22,388
+Next on India's Defence, Decoded: INS Vikrant, and what it actually takes to build an aircraft carrier at home.
+
+162
+00:14:22,388 --> 00:14:26,441
+To catch it when it's out, subscribe to Gyaan-X Studios.
+
