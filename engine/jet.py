@@ -122,15 +122,16 @@ def timeline(ctx, x0, x1, y, marks, a, p=1., col=None):
                 txt(ctx, ln, x, y + 54 + i*26, 21, B['steel'], a*ease(seg(q, .3, 1)), 'bold', 'c', mono=True)
 
 
-def plane_row(ctx, y, n, a, gone=0., s=.055, col=None):
-    """a row of small aircraft silhouettes, fading out left to right"""
+def plane_row(ctx, y, n, a, gone=0., s=.16, col=None):
+    """a row of aircraft silhouettes, fading out left to right as the fleet retires"""
     col = col or B['steel']
     for k in range(n):
-        x = 240 + k*((W - 480)/max(n - 1, 1))
-        al = a*(1 - min(1, max(0, gone*n - k)))
+        x = 300 + k*((W - 600)/max(n - 1, 1))
+        f = min(1, max(0, gone*n - k))
+        al = a*(1 - f)
         if al <= 0.01: continue
         ctx.save(); ctx.translate(x, y); ctx.scale(s, s)
-        stroke_pts(ctx, jet_pts(), 1, col, al, 24)
+        stroke_pts(ctx, jet_pts(), 1, col, al, 11)
         ctx.restore()
 
 
@@ -198,32 +199,46 @@ def testbed(ctx, cx, cy, s, a, p=1., hi=1, t=0.):
 
 
 # ---------- three tracks ----------
-def track(ctx, x, y0, y1, title, lines, col, a, p=1.):
-    stroke_pts(ctx, [(x, y0), (x, y1)], p, col, a, 3, glow=False)
+def track(ctx, x, y0, y1, title, lines, col, a, p=1., w=430):
+    """A labelled track: a head dot, then stacked cards. The spine is drawn only in
+    the gaps between cards, so it never strikes through the text."""
+    txt(ctx, title, x, y0 - 30, 30, col, a*ease(min(p*1.6, 1)), 'black', 'c', glow=.4)
     glow_dot(ctx, x, y0, 7, col, a*min(1, p*3))
-    txt(ctx, title, x, y0 - 28, 30, col, a*ease(min(p*1.6, 1)), 'black', 'c', glow=.4)
+    ch, gap = 112, 34
     for i, ln in enumerate(lines):
-        q = seg(p, .35 + i*.2, .75 + i*.2)
-        if q > 0:
-            for j, w_ in enumerate(ln.split('|')):
-                txt(ctx, w_, x, y0 + 86 + i*104 + j*28, 23, B['steel'], a*ease(q), 'bold', 'c', mono=True)
+        q = ease(seg(p, .3 + i*.22, .72 + i*.22))
+        top = y0 + 40 + i*(ch + gap)
+        # spine segment above this card, drawn in the gap only
+        stroke_pts(ctx, [(x, top - gap), (x, top)], min(1, q*2.5), col, a*.75, 3, glow=False)
+        if q <= 0: continue
+        fill(ctx, lambda: rrect(ctx, x - w/2, top, w, ch, 8), B['deep'], .88*a*q)
+        stroke_pts(ctx, rect_pts(x - w/2, top, w, ch, ), 1, col, a*q, 2)
+        parts = ln.split('|')
+        y = top + ch/2 + (0 if len(parts) > 1 else 8) - (14 if len(parts) > 1 else 0)
+        for j, w_ in enumerate(parts):
+            txt(ctx, w_, x, y + j*30, 24, B['ice'], a*q, 'bold', 'c', mono=True)
 
 
 # ---------- squadron arithmetic ----------
 def sqnbars(ctx, x, y, w, a, p=1., sanctioned=42.5, actual=31., falling=29.):
+    """Two bars, each labelled above itself so no text sits on a bar."""
     unit = w/sanctioned
-    txt(ctx, 'SANCTIONED  42½ SQUADRONS', x, y - 22, 24, B['dim'], a, 'bold', mono=True)
-    stroke_pts(ctx, rect_pts(x, y, w, 56), p, B['grid'], a, 2.5, dash=[8, 8], glow=False)
+    bh = 74
+    txt(ctx, 'SANCTIONED', x, y - 18, 26, B['dim'], a, 'black', mono=True)
+    txt(ctx, '42½ SQUADRONS', x + w, y - 18, 26, B['dim'], a, 'black', 'r', mono=True)
+    stroke_pts(ctx, rect_pts(x, y, w, bh), p, B['grid'], a, 2.5, dash=[9, 9], glow=False)
     q = ease(seg(p, .2, 1))
-    fill(ctx, lambda: rrect(ctx, x, y + 86, unit*actual*q, 56, 6), B['cyan'], .22*a)
-    stroke_pts(ctx, rect_pts(x, y + 86, unit*actual*q, 56), 1, B['cyan'], a, 2.5)
-    txt(ctx, 'ACTUAL  31  (SEP 2025, AS REPORTED)', x + 18, y + 124, 24, B['ice'], a*q, 'bold', mono=True)
+    if q > 0:
+        txt(ctx, 'ACTUAL, SEPTEMBER 2025 — AS REPORTED', x, y + bh + 62, 26, B['steel'], a*q, 'black', mono=True)
+        fill(ctx, lambda: rrect(ctx, x, y + bh + 80, unit*actual*q, bh, 6), B['cyan'], .22*a)
+        stroke_pts(ctx, rect_pts(x, y + bh + 80, unit*actual*q, bh), 1, B['cyan'], a, 2.5)
+        txt(ctx, '31', x + unit*actual*q + 24, y + bh + 134, 46, B['cyan'], a*q, 'black')
     q2 = ease(seg(p, .62, 1))
     if q2 > 0:
         xf = x + unit*falling
-        fill(ctx, lambda: ctx.rectangle(xf, y + 86, unit*(actual - falling), 56), B['alert'], .22*a*q2)
-        stroke_pts(ctx, [(xf, y + 80), (xf, y + 148)], 1, B['alert'], a*q2, 3, glow=False)
-        tagb(ctx, xf, y + 182, 'FALLING TO 29', B['alert'], a*q2, 22, align='c')
+        fill(ctx, lambda: ctx.rectangle(xf, y + bh + 80, unit*(actual - falling), bh), B['alert'], .3*a*q2)
+        stroke_pts(ctx, [(xf, y + bh + 72), (xf, y + bh + 166)], 1, B['alert'], a*q2, 3, glow=False)
+        tagb(ctx, xf, y + bh + 200, 'TWO MiG-21 SQUADRONS RETIRED — FALLING TO 29', B['alert'], a*q2, 24, align='c')
 
 
 # ---------- the blueprint wall ----------

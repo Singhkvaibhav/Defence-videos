@@ -119,9 +119,11 @@ def s_qs(ctx, t, D):
         y = 250 + k*160
         x = lerp(-500, 300, eob(p, 1.6))
         col = B['amber'] if k == 3 else B['cyan']
+        ctx.save(); ctx.rectangle(x, y, 1320, 124); ctx.clip()
         card(ctx, x, y, 1320, 124, a*p, None, col, 1.)
         txt(ctx, f'{k+1}', x + 46, y + 86, 56, col, a*p, 'black')
         txt(ctx, q_, x + 130, y + 82, 44, B['ice'], a*p, 'black')
+        ctx.restore()
 s_qs = scene(s_qs)
 
 
@@ -173,16 +175,20 @@ def s_emb(i):
             q = fin(t, .3, 1.0)
             txt(ctx, 'MAY 1998', 960, 300, 92, B['ice'], a*q, 'black', 'c', glow=.6)
             txt(ctx, 'POKHRAN  ·  US TECHNOLOGY EMBARGO', 960, 356, 28, B['alert'], a*ease(seg(t, .8, 1.6)), 'bold', 'c', mono=True)
-            for k, lab in enumerate(('FOREIGN PARTNER', 'FOREIGN PARTNER')):
-                qq = cue(t, 'Their engineers went home' if k else 'had both agreed to lend expertise', .2, .6)
+            for k, lab in enumerate(('LOCKHEED MARTIN', 'GENERAL ELECTRIC')):
+                qq = cue(t, 'had both agreed to lend expertise', .2, .6 + k*.25)
                 if qq <= 0: continue
                 x = 330 + k*700
                 grey = ease(cue(t, 'Their engineers went home', 0, 1.2))
                 col = B['steel'] if grey > .5 else B['cyan']
-                card(ctx, x, 470, 540, 180, a*ease(qq)*(1 - .45*grey), None, col, 1.)
-                txt(ctx, 'ENGINEERS', x + 40, 550, 44, B['ice'], a*ease(qq)*(1 - .45*grey), 'black')
-                txt(ctx, 'WITHDRAWN' if grey > .5 else 'ON THE PROGRAMME', x + 40, 602, 24, col,
-                    a*ease(qq)*(1 - .3*grey), 'bold', mono=True)
+                al = a*ease(qq)*(1 - .4*grey)
+                card(ctx, x, 470, 540, 190, al, None, col, 1.)
+                txt(ctx, lab, x + 36, 546, 36, B['ice'], al, 'black')
+                txt(ctx, 'ENGINEERS WITHDRAWN' if grey > .5 else 'ENGINEERS ON THE PROGRAMME',
+                    x + 36, 600, 22, col, al, 'bold', mono=True)
+                if grey > .5:
+                    stroke_pts(ctx, [(x + 30, 534), (x + 30 + tw(ctx, lab, 36, 'black') + 12, 534)],
+                               ease(seg(grey, .5, 1)), B['alert'], a*.9, 3, glow=False)
             c = cue(t, 'turned the clock back by four years', .25, .6)
             if c > 0: tagb(ctx, 960, 800, 'ONE ACCOUNT: THE CLOCK TURNED BACK FOUR YEARS', B['alert'], a*ease(c), 26, align='c')
         elif i == 1:
@@ -230,7 +236,7 @@ def s_clr(i):
                     txt(ctx, body, 330, 752, 34, B['ice'], a*ease(seg(q, .3, 1)), 'bold')
         elif i == 1:
             marks = [(.02, '2001', 'FIRST|FLIGHT', 1.), (.22, '2011', 'IOC', 1.), (.38, 'DEC 2013', 'IOC-II', 1.),
-                     (.60, 'FEB 2019', 'FOC', ease(fin(t, .4, 1.0)))]
+                     (.70, 'FEB 2019', 'FOC', ease(fin(t, .4, 1.0)))]
             timeline(ctx, 220, 1700, 470, marks, a)
             card(ctx, 300, 640, 1320, 190, a, 'FINAL OPERATIONAL CLEARANCE', B['amber'], 1.)
             for k, ln in enumerate(('all the weapons  ·  air-to-air refuelling  ·  the full envelope',
@@ -238,11 +244,11 @@ def s_clr(i):
                 q = ease(seg(t, .5 + k*1.0, 1.4 + k*1.0))
                 if q > 0: txt(ctx, ln, 330, 740 + k*54, 32, B['ice'] if k == 0 else B['steel'], a*q, 'bold')
         else:
-            marks = [(.02, '2001', 'FIRST|FLIGHT', 1.), (.22, '2011', 'IOC', 1.), (.38, 'DEC 2013', 'IOC-II', 1.),
-                     (.60, 'FEB 2019', 'FOC', 1.),
-                     (.78, 'JUL 2016', 'No. 45 SQN|FLYING DAGGERS', ease(cue(t, 'Number 45 Squadron', .25, .7))),
-                     (.96, '2020', 'No. 18 SQN|FLYING BULLETS', ease(cue(t, 'Number 18, the Flying Bullets', .25, .7)))]
-            timeline(ctx, 220, 1660, 420, marks, a)
+            marks = [(.02, '2001', 'FIRST|FLIGHT', 1.), (.20, '2011', 'IOC', 1.), (.34, 'DEC 2013', 'IOC-II', 1.),
+                     (.52, 'JUL 2016', 'No. 45 SQN|FLYING DAGGERS', ease(cue(t, 'Number 45 Squadron', .25, .7))),
+                     (.70, 'FEB 2019', 'FOC', 1.),
+                     (.88, '2020', 'No. 18 SQN|FLYING BULLETS', ease(cue(t, 'Number 18, the Flying Bullets', .25, .7)))]
+            timeline(ctx, 240, 1680, 420, marks, a)
             q = cue(t, 'Forty aircraft were ordered', .25, .6)
             if q > 0:
                 card(ctx, 300, 630, 1320, 220, a*ease(q), 'THE FIRST BATCH · 40 AIRCRAFT', B['cyan'], ease(q))
@@ -257,10 +263,11 @@ def s_clr(i):
 
 
 # ================= 7. what the Mark 1A is =================
-CALLOUTS = [('AESA RADAR', 'electronically scanned, no moving parts', (1230, 300), 'an AESA radar'),
-            ('ELECTRONIC WARFARE SUITE', '', (1230, 430), 'an electronic warfare suite'),
-            ('BEYOND-VISUAL-RANGE MISSILE', 'shoot at what it has not seen', (1230, 560), 'a beyond-visual-range missile'),
-            ('AIR-TO-AIR REFUELLING', '', (1230, 690), 'air-to-air refuelling')]
+# (label, sub, label position, anchor on the airframe, cue)
+CALLOUTS = [('AESA RADAR', 'electronically scanned, no moving parts', (1210, 300), (620, 330), 'an AESA radar'),
+            ('ELECTRONIC WARFARE SUITE', 'sees what is looking at it', (1210, 440), (700, 470), 'an electronic warfare suite'),
+            ('BEYOND-VISUAL-RANGE MISSILE', 'shoot at what it has not seen', (1210, 580), (810, 600), 'a beyond-visual-range missile'),
+            ('AIR-TO-AIR REFUELLING', 'short legs become long ones', (1210, 720), (666, 420), 'air-to-air refuelling')]
 
 
 def s_mk1a(i):
@@ -270,12 +277,16 @@ def s_mk1a(i):
         if i == 0:
             jet(ctx, 620, 560, .82, 1., a)
             jet_engine(ctx, 620, 560, .82, a*.5, 1., True)
-            for k, (lab, sub, (x, y), c) in enumerate(CALLOUTS):
+            for k, (lab, sub, (x, y), (ax, ay), c) in enumerate(CALLOUTS):
                 q = cue(t, c, .25, .55)
                 if q <= 0: continue
-                stroke_pts(ctx, [(760, 420 + k*90), (x - 20, y - 14)], ease(q), B['cyan'], a*.7, 2, glow=False)
-                tagb(ctx, x, y - 14, lab, B['cyan'], a*ease(q), 26)
-                if sub: txt(ctx, sub, x + 6, y + 36, 21, B['steel'], a*ease(seg(q, .3, 1)), 'bold', mono=True)
+                e = ease(q)
+                # elbow leader: out from the anchor, then level into the label
+                mx = ax + (x - 60 - ax)*.45
+                stroke_pts(ctx, [(ax, ay), (mx, y - 14), (x - 22, y - 14)], e, B['cyan'], a*.75, 2, glow=False)
+                glow_dot(ctx, ax, ay, 5, B['cyan'], a*e)
+                tagb(ctx, x, y - 14, lab, B['cyan'], a*e, 26)
+                if sub: txt(ctx, sub, x + 6, y + 34, 21, B['steel'], a*ease(seg(q, .3, 1)), 'bold', mono=True)
             txt(ctx, 'SAME AIRFRAME', 620, 900, 30, B['steel'], a*ease(seg(t, .4, 1.2)), 'bold', 'c', mono=True)
         elif i == 1:
             for k, (n, d, val, sub, col) in enumerate((
@@ -293,7 +304,8 @@ def s_mk1a(i):
                 txt(ctx, '180', 960, 740, 150, B['ice'], a*q, 'black', 'c', glow=1.)
                 txt(ctx, 'AIRCRAFT ON ORDER  ·  ON PAPER, ABOUT TEN SQUADRONS', 960, 810, 28, B['cyan'], a*ease(seg(q, .4, 1)), 'bold', 'c', mono=True)
         else:
-            card(ctx, 240, 240, 1440, 420, a, 'THE 97-JET CONTRACT · 25 SEPTEMBER 2025', B['cyan'], 1.)
+            c0 = ease(cue(t, 'indigenous content above sixty-four per cent', .55, .5))
+            card(ctx, 240, 240, 1440, 420, a*c0, 'THE 97-JET CONTRACT · 25 SEPTEMBER 2025', B['cyan'], c0)
             rows = [('OVER 64%', 'INDIGENOUS CONTENT', 'indigenous content above sixty-four per cent'),
                     ('UTTAM', "INDIA'S OWN AESA RADAR", "India's own Uttam AESA radar"),
                     ('SWAYAM RAKSHA KAVACH', 'IN PLACE OF IMPORTED SYSTEMS', 'in place of imported ones')]
@@ -357,7 +369,8 @@ def s_kav(i):
         bg(ctx); a = outro(t, D, .35)
         hud(ctx, t, 'KAVERI · GTRE, DRDO', a, EP)
         if i == 0:
-            card(ctx, 240, 250, 1440, 330, a, 'KAVERI', B['cyan'], fin(t, .1, .8))
+            c0 = ease(cue(t, 'about seventy-two kilonewtons', .6, .5))
+            card(ctx, 240, 250, 1440, 330, a*c0, 'KAVERI · GTRE', B['cyan'], c0)
             for k, (n, lab, c) in enumerate((('~72 kN', 'THRUST REACHED, AS REPORTED', 'about seventy-two kilonewtons'),
                                              ('83–85 kN', 'THE AIRCRAFT NEEDED', 'the aircraft needed'),
                                              ('2008', 'DELINKED FROM THE FIGHTER PROGRAMME', 'delinked from the fighter programme'))):
@@ -368,7 +381,7 @@ def s_kav(i):
                 for j, ln in enumerate(wrap(ctx, lab, 21, 400, 'bold', True)):
                     txt(ctx, ln, x, 446 + j*28, 21, B['steel'], a*ease(seg(q, .3, 1)), 'bold', mono=True)
             q = cue(t, 'delinked from the fighter programme', .25, .6)
-            if q > 0: txt(ctx, 'DELINKED FROM THE FIGHTER PROGRAMME', 960, 700, 34, B['alert'], a*ease(q), 'black', 'c', glow=.5)
+            if q > 0: txt(ctx, 'DECADES OF WORK, AND IT NEVER FLEW THE FIGHTER', 960, 700, 34, B['alert'], a*ease(q), 'black', 'c', glow=.5)
         elif i == 1:
             nf = cue(t, 'national failure', .25, .6)
             if nf > 0: txt(ctx, 'USUALLY TOLD AS A NATIONAL FAILURE. IT IS HARDER THAN THAT.',
@@ -382,7 +395,8 @@ def s_kav(i):
                 tagb(ctx, 960, 740, 'GAS HOTTER THAN THE BLADES’ OWN MELTING POINT', B['alert'], a*ease(q), 30, align='c')
         else:
             icon_turbine(ctx, 430, 480, 3.2, B['cyan'], a, 1., t, True, 0.)
-            card(ctx, 830, 250, 900, 460, a, 'WHY THE BLADES SURVIVE', B['cyan'], fin(t, .1, .8))
+            c0 = ease(cue(t, 'a single crystal of nickel alloy', .6, .5))
+            card(ctx, 830, 250, 900, 460, a*c0, 'WHY THE BLADES SURVIVE', B['cyan'], c0)
             rows = [('GROWN AS ONE CRYSTAL', 'of nickel alloy', 'a single crystal of nickel alloy'),
                     ('COATED IN CERAMIC', '', 'coated in ceramic'),
                     ('COOLED FROM INSIDE', 'air bled through tiny holes', 'tiny holes inside it'),
@@ -401,7 +415,7 @@ def s_kde(i):
         bg(ctx); a = outro(t, D, .35)
         hud(ctx, t, 'KAVERI DERIVATIVE ENGINE · REPORTED 1 OCTOBER 2026', a, EP)
         if i == 0:
-            card(ctx, 240, 250, 1440, 330, a, 'WHAT PROVING AN ENGINE NEEDS', B['steel'], fin(t, .1, .8))
+            card(ctx, 240, 250, 1440, 330, a*ease(fin(t, .15, .6)), 'WHAT PROVING AN ENGINE NEEDS', B['steel'], fin(t, .15, .6))
             for k, lab in enumerate(('HIGH-ALTITUDE TEST BEDS', 'A FLYING TESTBED', 'A CERTIFICATION CHAIN')):
                 q = ease(seg(t, .4 + k*.7, 1.2 + k*.7))
                 if q > 0: tagb(ctx, 320 + k*470, 420, lab, B['steel'], a*q, 24)
@@ -433,7 +447,7 @@ def s_kde(i):
             q3 = cue(t, 'thirty years', .25, .6)
             if q3 > 0: txt(ctx, 'A DIFFERENT SENTENCE FROM THE ONE INDIA HAS BEEN WRITING FOR THIRTY YEARS',
                            960, 680, 28, B['steel'], a*ease(q3), 'bold', 'c', mono=True)
-            icon_turbine(ctx, 960, 820, 1.6, B['amber'], a*ease(fin(t, .3, 1.)), 1., t, True, .6)
+            icon_turbine(ctx, 960, 810, 2.1, B['amber'], a*ease(fin(t, .3, 1.)), 1., t, True, .6)
     return scene(f)
 
 
@@ -517,8 +531,8 @@ def s_deb(i):
         hud(ctx, t, 'WHERE INFORMED PEOPLE DISAGREE', a, EP)
         sides = [('THE CASE FOR PATIENCE', [
                     'Every country that builds fighters took decades',
-                    'India owns design authority: airframe,',
-                    'flight control laws, increasingly the radar',
+                    'India owns design authority — airframe, flight',
+                    'control laws, increasingly the radar',
                     'It compounds into Mark 2 and AMCA'], B['cyan']),
                  ('THE CASE FOR URGENCY', [
                     'Squadrons are falling now',
@@ -566,7 +580,7 @@ def s_st(i):
             name, note, status, col, c = ROWS[k]
             q = ease(cue(t, c, .3, .8))
             if q <= 0: continue
-            statusrow(ctx, 220, 260 + (k - show[0])*300, 1480, name, note, status, B[col], a*q, q)
+            statusrow(ctx, 220, 330 + (k - show[0])*250, 1480, name, note, status, B[col], a*q, q)
     return scene(f)
 
 
@@ -574,24 +588,32 @@ def s_st(i):
 def s_three(ctx, t, D):
     bg(ctx); a = outro(t, D, .5)
     hud(ctx, t, 'IN THREE WORDS', a, EP)
-    words = [('DESIGN', 'India can do this'), ('BUILD', 'India can do this'), ('POWER', 'half filled in')]
+    words = [('DESIGN', 'INDIA CAN DO THIS'), ('BUILD', 'INDIA CAN DO THIS'), ('POWER', 'HALF WAY THERE')]
+    # the third word starts filling as the narration reaches it, so the fill is
+    # visible for several seconds rather than flashing on the closing word
+    fillp = ease(cue(t, 'The third is the whole story', .2, 2.2))
     for k, (w_, sub) in enumerate(words):
         q = ease(cue(t, ['Design.', 'Build.', 'Power.'][k], .25, .5))
         if q <= 0: continue
-        y = 300 + k*190
+        y = 290 + k*180
         col = B['amber'] if k == 2 else B['cyan']
+        wq = tw(ctx, w_, 110, 'black')
         if k < 2:
             txt(ctx, w_, 960, y, 110, col, a*q, 'black', 'c', glow=1.)
+            stroke_pts(ctx, [(960 - 30, y + 34), (960 - 10, y + 52), (960 + 32, y + 6)],
+                       ease(seg(q, .5, 1)), B['cyan'], a*q*.0, 4, glow=False)
         else:
-            # the third word fills only part of the way
-            fillp = ease(cue(t, 'It is half filled in', .2, 1.0))
             txt(ctx, w_, 960, y, 110, B['dim'], a*q, 'black', 'c')
             ctx.save()
-            wq = tw(ctx, w_, 110, 'black')
-            ctx.rectangle(960 - wq/2, y - 96, wq*(.5*fillp), 120); ctx.clip()
+            ctx.rectangle(960 - wq/2, y - 100, wq*(.5*fillp), 130); ctx.clip()
             txt(ctx, w_, 960, y, 110, B['amber'], a*q, 'black', 'c', glow=1.2)
             ctx.restore()
-        txt(ctx, sub, 960, y + 46, 24, B['steel'], a*ease(seg(q, .4, 1)), 'bold', 'c', mono=True)
+            # a half-filled bar under the word, so the point is unmistakable
+            bx, bw = 960 - wq/2, wq
+            stroke_pts(ctx, rect_pts(bx, y + 26, bw, 16), q, B['dim'], a*q*.8, 2, glow=False)
+            fill(ctx, lambda: ctx.rectangle(bx, y + 26, bw*.5*fillp, 16), B['amber'], .85*a*q)
+        txt(ctx, sub, 960, y + (76 if k == 2 else 46), 24,
+            B['amber'] if k == 2 else B['steel'], a*ease(seg(q, .4, 1)), 'bold', 'c', mono=True)
     e = cue(t, 'stopped being an empty outline', .25, .6)
     if e > 0:
         txt(ctx, 'AFTER FORTY YEARS, NO LONGER AN EMPTY OUTLINE', 960, 900, 30, B['ice'], a*ease(e), 'bold', 'c', mono=True)
