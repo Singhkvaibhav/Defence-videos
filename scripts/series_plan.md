@@ -35,7 +35,7 @@ A GyaanXstudios series for a general audience: one defence system or idea per ep
 3. Agni-5 and MIRV: one missile, many warheads (script written, 15 Nov 2026)
 4. S-400 and Project Kusha: India's missile shield
 5. Tejas Mk1A: the fighter jet's long road (done, 21 Nov 2026)
-6. INS Vikrant: building an aircraft carrier at home (script written, 21 Nov 2026 — awaiting approval)
+6. INS Vikrant: building an aircraft carrier at home (done, 21 Nov 2026)
 7. Pinaka: from rockets to guided missiles
 8. Arihant-class submarines: the third leg of the triad
 9. Drones and loitering munitions after Operation Sindoor
