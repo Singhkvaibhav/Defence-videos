@@ -7,7 +7,7 @@ Commentary from ThePrint is credited on screen wherever it is used.
 import os, sys, math, cairo
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from engine import core
-TOTAL = 905.0
+TOTAL = 822.0   # measured: 778.9 s of narration (longer of EN/HI per beat) + ~1.1 s pause each
 core.TOTAL = TOTAL
 from engine.core import W, H, seg, ease, eoc, eob, lerp, T
 from engine.bp import (B, rgba, rrect, bg, txt, tw, wrap, stroke_pts, rect_pts, fill, glow_dot,
@@ -89,7 +89,7 @@ def s_anchor(i):
             p = cue(t, c, .3, .9) if i == 0 else 1.
             if p <= 0: continue
             col = B['amber'] if k == 2 else B['cyan']
-            problem3(ctx, 390 + k*565, 420, lab, n, ic, col, a, p)
+            problem3(ctx, 390 + k*565, 470, lab, n, ic, col, a, p)
         if i == 1:
             q = cue(t, 'two out of three', .25, .6)
             if q > 0:
@@ -169,7 +169,7 @@ def s_steel(i):
         hud(ctx, t, 'WARSHIP-GRADE STEEL · DRDO · SAIL · INDIAN NAVY', a, EP)
         shock = t if i == 0 else 0.
         stamped = ease(cue(t, 'self-sufficient', .3, 1.0)) if i == 1 else (1. if i == 2 else 0.)
-        steel_plate(ctx, 700, 450, .95, a, fin(t, .15, 1.2) if i == 0 else 1., stamped, shock)
+        steel_plate(ctx, 640, 470, 1.15, a, fin(t, .15, 1.2) if i == 0 else 1., stamped, shock)
         if i == 0:
             q = cue(t, 'without cracking', .25, .6)
             if q > 0:
@@ -246,16 +246,16 @@ def s_ramp(i):
             q = cue(t, 'slow to share it', .25, .6)
             if q > 0: txt(ctx, 'INDIA DOES NOT HAVE THAT TECHNOLOGY', 960, 880, 30, B['steel'], a*ease(q), 'black', 'c')
         else:
-            skijump(ctx, 700, 420, .62, a, 1., t, 1.)
+            skijump(ctx, 820, 360, .66, a, 1., t, 1.)
             qw = cue(t, 'three arrester wires', .25, .6)
-            if qw > 0: tagb(ctx, 960, 560, 'BACK ABOARD: ONE OF THREE ARRESTER WIRES', B['cyan'], a*ease(qw), 28, align='c')
+            if qw > 0: tagb(ctx, 960, 520, 'BACK ABOARD: ONE OF THREE ARRESTER WIRES', B['cyan'], a*ease(qw), 28, align='c')
             q = cue(t, 'The honest cost', .25, .6)
             if q > 0:
-                card(ctx, 300, 600, 1320, 240, a*ease(q), 'THE HONEST COST', B['alert'], ease(q))
+                card(ctx, 300, 620, 1320, 240, a*ease(q), 'THE HONEST COST', B['alert'], ease(q))
                 for k, ln in enumerate(('A ski-jump launch cannot be as heavy as a catapult launch.',
                                         'Less fuel, or fewer weapons, or both.')):
                     qq = ease(seg(q, .2 + k*.3, .8 + k*.3))
-                    txt(ctx, ln, 340, 700 + k*58, 34, B['ice'] if k == 0 else B['amber'], a*qq, 'bold')
+                    txt(ctx, ln, 340, 720 + k*58, 34, B['ice'] if k == 0 else B['amber'], a*qq, 'bold')
     return scene(f)
 
 
@@ -354,9 +354,9 @@ def s_why(i):
         reach(ctx, a, fin(t, .2, 1.4) if i == 0 else 1., t, mv)
         if i == 0:
             q = cue(t, 'the runway stays where it is', .25, .6)
-            if q > 0: txt(ctx, 'THE RUNWAY STAYS WHERE IT IS', 560, 880, 28, B['steel'], a*ease(q), 'bold', 'c', mono=True)
+            if q > 0: txt(ctx, 'THE RUNWAY STAYS WHERE IT IS', 520, 920, 28, B['steel'], a*ease(q), 'bold', 'c', mono=True)
             q2 = cue(t, 'the day after a decision', .25, .6)
-            if q2 > 0: txt(ctx, 'SOMEWHERE THE DAY AFTER A DECISION', 1480, 880, 28, B['cyan'], a*ease(q2), 'bold', 'c', mono=True)
+            if q2 > 0: txt(ctx, 'SOMEWHERE THE DAY AFTER A DECISION', 1420, 920, 28, B['cyan'], a*ease(q2), 'bold', 'c', mono=True)
         elif i == 1:
             q = cue(t, 'about a thousand kilometres', .3, .7)
             if q > 0:
@@ -570,7 +570,7 @@ GROUPS = {k: stem_of(k) for k, _ in EN}
 
 KEYS = {
  'cold2': [('This one India built', 'INDIA BUILT IT', 'amber')],
- 'id2': [('forty-three thousand tonnes', '43,000 TONNES', 'cyan')],
+ 'id1': [('forty-three thousand tonnes', '43,000 TONNES', 'cyan')],
  'steel2': [('self-sufficient', 'SELF-SUFFICIENT', 'amber')],
  'build2': [('Seventeen years', '17 YEARS', 'amber')],
  'deck2': [('That is problem two, solved', 'PROBLEM TWO', 'cyan')],
@@ -579,7 +579,7 @@ KEYS = {
  'third4': [('sixty-five thousand tonnes', '65,000 TONNES', 'amber')],
 }
 ANNOT = {
- 'wing4': [('The thing that flies is bought', 'underline', 1150, 540, 700, 0)],
+ 'wing4': [('the thing that flies is bought', 'underline', 1150, 540, 700, 0)],
  'deb4': [('a rupee not spent there', 'circle', 960, 760, 1100, 90)],
 }
 
@@ -596,7 +596,7 @@ FX += [('tick', 'cold1', .15, .12),
        ('ping', 'ramp2', 'the ramp flings it upwards', .3),
        ('ding', 'deck2', 'That is problem two, solved', .25),
        ('glitch', 'wing3', 'imported American GE engines', .3),
-       ('boom', 'wing4', 'The thing that flies is bought', .3),
+       ('boom', 'wing4', 'the thing that flies is bought', .3),
        ('ping', 'deb1', 'sea control versus sea denial', .3),
        ('glitch', 'third2', 'No Indian carrier answered', .3),
        ('riser', 'three1', 'Steel.', .12), ('ding', 'three1', 'Steel.', .22),

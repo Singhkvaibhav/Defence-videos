@@ -103,25 +103,25 @@ def bell(ctx, cx, cy, s, a, p=1., t=0.):
 
 # ---------- the three problems ----------
 def icon_hull(ctx, x, y, s, col, a, p=1.):
-    ctx.save(); ctx.translate(x, y); ctx.scale(s*.17, s*.17)
-    stroke_pts(ctx, [(-430, -60), (-380, 60), (380, 60), (430, -60), (-430, -60)], p, col, a, 16)
-    stroke_pts(ctx, [(-430, -60), (430, -60)], seg(p, .4, 1), col, a*.8, 14, glow=False)
+    ctx.save(); ctx.translate(x, y); ctx.scale(s*.33, s*.33)
+    stroke_pts(ctx, [(-430, -60), (-380, 60), (380, 60), (430, -60), (-430, -60)], p, col, a, 9)
+    stroke_pts(ctx, [(-430, -60), (430, -60)], seg(p, .4, 1), col, a*.8, 8, glow=False)
     ctx.restore()
 
 
 def icon_deck(ctx, x, y, s, col, a, p=1.):
-    ctx.save(); ctx.translate(x, y); ctx.scale(s*.17, s*.17)
-    stroke_pts(ctx, [(-420, 40), (300, 40)], p, col, a, 16)
-    stroke_pts(ctx, bez((300, 40), (420, 34), (470, -40), 20), seg(p, .35, 1), col, a, 16)
+    ctx.save(); ctx.translate(x, y); ctx.scale(s*.33, s*.33)
+    stroke_pts(ctx, [(-420, 40), (300, 40)], p, col, a, 9)
+    stroke_pts(ctx, bez((300, 40), (420, 34), (470, -40), 20), seg(p, .35, 1), col, a, 9)
     for k in range(3):
-        stroke_pts(ctx, [(-300 + k*120, 0), (-330 + k*120, 76)], seg(p, .5 + k*.12, .9), col, a*.8, 11, glow=False)
+        stroke_pts(ctx, [(-300 + k*120, 0), (-330 + k*120, 76)], seg(p, .5 + k*.12, .9), col, a*.8, 7, glow=False)
     ctx.restore()
 
 
 def icon_plane(ctx, x, y, s, col, a, p=1.):
-    ctx.save(); ctx.translate(x, y); ctx.scale(s*.2, s*.2)
+    ctx.save(); ctx.translate(x, y); ctx.scale(s*.36, s*.36)
     stroke_pts(ctx, [(0, -180), (24, -96), (40, -30), (250, 110), (250, 140), (90, 140), (60, 190),
-                     (-60, 190), (-90, 140), (-250, 140), (-250, 110), (-40, -30), (-24, -96), (0, -180)], p, col, a, 13)
+                     (-60, 190), (-90, 140), (-250, 140), (-250, 110), (-40, -30), (-24, -96), (0, -180)], p, col, a, 8)
     ctx.restore()
 
 
@@ -135,9 +135,13 @@ def problem3(ctx, x, y, label, n, icon, col, a, p, hollow=False):
 def steel_plate(ctx, cx, cy, s, a, p=1., stamped=0., shock=0.):
     ctx.save(); ctx.translate(cx, cy); ctx.scale(s, s)
     stroke_pts(ctx, rect_pts(-300, -170, 600, 340), p, B['ice'], a, 3)
-    for k in range(5):
-        stroke_pts(ctx, [(-300, -112 + k*68), (300, -112 + k*68)], seg(p, .2 + k*.1, .7 + k*.1),
-                   B['grid'], a*.55, 1.6, glow=False)
+    fill(ctx, lambda: ctx.rectangle(-300, -170, 600, 340), B['cyan'], .07*a*ease(seg(p, .2, 1)))
+    for k in range(9):
+        stroke_pts(ctx, [(-300, -150 + k*38), (300, -150 + k*38)], seg(p, .2 + k*.06, .7 + k*.06),
+                   B['steel'], a*.4, 2, glow=False)
+    for k in range(4):
+        stroke_pts(ctx, [(-180 + k*120, -170), (-180 + k*120, 170)], seg(p, .35 + k*.08, .8 + k*.08),
+                   B['grid'], a*.3, 1.6, glow=False)
     if shock > 0:
         for k in range(4):
             r = 60 + k*90
@@ -159,19 +163,19 @@ def steel_plate(ctx, cx, cy, s, a, p=1., stamped=0., shock=0.):
 # ---------- reach: two abstract circles, never a map ----------
 def reach(ctx, a, p=1., t=0., moved=0.):
     """Left: a fixed base with a fixed circle. Right: a ship whose circle travels."""
-    bx, by = 560, 500
+    bx, by = 520, 610
     stroke_pts(ctx, rect_pts(bx - 46, by - 10, 92, 44), min(1, p*2), B['ice'], a, 3)
     stroke_pts(ctx, [(bx - 70, by + 34), (bx + 70, by + 34)], min(1, p*2), B['dim'], a*.8, 2, glow=False)
     txt(ctx, 'LAND BASE', bx, by + 90, 24, B['steel'], a*ease(min(1, p*2)), 'bold', 'c', mono=True)
     ctx.new_path(); rgba(ctx, B['steel'], a*.55*ease(p)); ctx.set_line_width(2.5); ctx.set_dash([12, 10])
-    ctx.arc(bx, by, 300*ease(p), 0, 2*math.pi); ctx.stroke(); ctx.set_dash([])
-    sx = 1380 + moved*220
+    ctx.arc(bx, by, 250*ease(p), 0, 2*math.pi); ctx.stroke(); ctx.set_dash([])
+    sx = 1300 + moved*150
     ctx.save(); ctx.translate(sx, by); ctx.scale(.26, .26)
     stroke_pts(ctx, [(-470, 0), (-430, 54), (380, 54), (470, 10), (470, -34), (-470, -34), (-470, 0)], min(1, p*2), B['ice'], a, 11)
     ctx.restore()
     txt(ctx, 'CARRIER', sx, by + 90, 24, B['cyan'], a*ease(min(1, p*2)), 'bold', 'c', mono=True)
     ctx.new_path(); rgba(ctx, B['cyan'], a*.6*ease(p)); ctx.set_line_width(2.5); ctx.set_dash([12, 10])
-    ctx.arc(sx, by, 300*ease(p), 0, 2*math.pi); ctx.stroke(); ctx.set_dash([])
+    ctx.arc(sx, by, 250*ease(p), 0, 2*math.pi); ctx.stroke(); ctx.set_dash([])
 
 
 # ---------- three ships ----------
